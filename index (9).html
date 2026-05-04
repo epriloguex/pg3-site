@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProGold AI — a systematic, AI-powered gold trading strategy built on disciplined risk management and full performance transparency. Copy trade XAUUSD with institutional execution through AxiTrader." />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="PG3 AI | ProGold AI" />
+  <meta property="og:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management, executed through AxiTrader." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PG3 AI | ProGold AI" />
+  <meta name="twitter:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:url" content="https://pg3ai.netlify.app/" />
+  <meta property="og:image" content="https://pg3ai.netlify.app/assets/pg3ai-logo.jpg" />
+  <meta name="twitter:image" content="https://pg3ai.netlify.app/assets/pg3ai-logo.jpg" />
+  <title>PG3 AI | ProGold AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%231a1814' stroke='%23d4af37' stroke-width='2'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='bold' fill='%23d4af37'>PG</text></svg>" type="image/svg+xml">
+  <style>
+    :root{
+      --bg:#080808;
+      --panel:#111111;
+      --panel-2:#151515;
+      --line:rgba(212,175,55,.24);
+      --gold:#d4af37;
+      --gold-2:#f2d57a;
+      --text:#f5f2e8;
+      --muted:#bdb6a6;
+      --soft:#8f876f;
+      --shadow:0 24px 80px rgba(0,0,0,.45);
+      --radius:22px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    *:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,.18), transparent 30%),
+        radial-gradient(circle at 10% 20%, rgba(212,175,55,.14), transparent 25%),
+        linear-gradient(180deg, #050505 0%, #0a0a0a 45%, #070707 100%);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    .nav{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter: blur(14px);
+      background:rgba(5,5,5,.72);
+      border-bottom:1px solid rgba(255,255,255,.05);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      min-height:88px;position:relative;padding:10px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;font-weight:700;letter-spacing:.04em;
+    }
+    .crest{
+      width:44px;height:44px;border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid rgba(212,175,55,.35);
+      background:#000;
+      color:var(--gold-2);font-size:16px;
+      box-shadow:0 0 8px rgba(212,175,55,.1);
+      overflow:hidden;
+    }
+    .crest img{width:100%;height:100%;object-fit:cover;display:block}
+    .nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px}
+    .nav-links a{transition:color .2s ease;position:relative}
+    .nav-links a:hover,.nav-links a:focus-visible{color:var(--gold-2)}
+    .nav-links a::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);border-radius:1px;transition:width .25s ease}
+    .nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 22px;border-radius:999px;
+      background:linear-gradient(180deg,var(--gold-2),var(--gold));
+      color:#16120b;font-weight:800;letter-spacing:.02em;
+      box-shadow:0 10px 30px rgba(212,175,55,.18);
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .cta:hover,.cta:focus-visible{transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,175,55,.3);filter:brightness(1.08)}
+    .cta:active{transform:translateY(0);box-shadow:0 8px 24px rgba(212,175,55,.2)}
+    .hero{padding:72px 0 34px;position:relative;overflow:hidden}
+    .hero-grid{
+      max-width:780px;margin:0 auto;text-align:center;
+    }
+    .hero-logo{
+      display:block;margin:0 auto 28px;
+      width:clamp(160px,24vw,230px);height:auto;
+      border-radius:50%;
+      background:#000;
+      box-shadow:
+        0 0 0 2px rgba(212,175,55,.55),
+        0 0 28px 6px rgba(212,175,55,.28),
+        0 0 80px 18px rgba(212,175,55,.14),
+        0 18px 50px rgba(0,0,0,.5);
+      animation:logoFloat 6s ease-in-out infinite;
+    }
+    @keyframes logoFloat{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-6px)}
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 22px;border-radius:999px;border:1px solid rgba(212,175,55,.55);
+      background:rgba(212,175,55,.03);color:#f5f2e8;font-size:13px;font-weight:600;
+      letter-spacing:.22em;text-transform:uppercase;
+    }
+    h1{
+      font-size:clamp(44px,7vw,84px);
+      line-height:.95;margin:18px 0 18px;
+      letter-spacing:-.04em;
+    }
+    .gradient{
+      background:linear-gradient(180deg,#fff4cb 0%, #f0d67a 35%, #c69413 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero p{
+      color:var(--muted);font-size:18px;line-height:1.7;max-width:650px;margin:0 auto 26px;
+    }
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;justify-content:center}
+    .ghost{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+      color:var(--text);font-weight:700;background:rgba(255,255,255,.03);
+      cursor:pointer;
+      transition:border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .ghost:hover,.ghost:focus-visible{border-color:var(--gold);background:rgba(212,175,55,.06);transform:translateY(-2px)}
+    .ghost:active{transform:translateY(0)}
+    .panel{
+      border:1px solid rgba(255,255,255,.06);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+      transition:border-color .25s ease, box-shadow .25s ease;
+    }
+    .panel:hover{border-color:rgba(212,175,55,.15);box-shadow:0 24px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(212,175,55,.08)}
+
+    .stats{padding:28px 0 18px}
+    .stat-grid{
+      display:grid;grid-template-columns:repeat(6,1fr);gap:16px;
+    }
+    .stat{
+      padding:22px 18px;background:linear-gradient(180deg, rgba(212,175,55,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.06);border-radius:20px;
+      min-height:138px;
+      transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+    .stat:hover{border-color:rgba(212,175,55,.2);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.3)}
+    .stat .label{color:var(--soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .stat .value{font-size:34px;font-weight:800;margin:14px 0 8px;white-space:nowrap}
+    .stat .sub{color:var(--muted);font-size:14px;line-height:1.5}
+
+    .section{padding:34px 0}
+    [id]{scroll-margin-top:96px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    /* panel hover — see consolidated .panel rule above */
+    .section h2{font-size:32px;margin:0 0 10px}
+    .section p{color:var(--muted);line-height:1.8;font-size:16px;margin:0}
+    .list{display:grid;gap:12px;margin-top:18px}
+    .item{
+      display:flex;gap:14px;align-items:flex-start;
+      padding:14px 0;border-top:1px solid rgba(255,255,255,.06)
+    }
+    .item:first-child{border-top:0;padding-top:0}
+    .dot{
+      width:28px;height:28px;flex:0 0 28px;border-radius:50%;display:grid;place-items:center;
+      background:rgba(212,175,55,.12);color:var(--gold-2);font-size:14px;border:1px solid var(--line)
+    }
+    .mini-chart{
+      margin-top:18px;height:180px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.05);
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      position:relative;
+    }
+    .mini-chart svg{width:100%;height:100%;display:block}
+    .quote{
+      margin-top:18px;padding:18px 20px;border-left:3px solid var(--gold);
+      background:rgba(212,175,55,.06);border-radius:0 16px 16px 0;color:#ede3bf
+    }
+    .banner{
+      padding:34px;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow);
+      background:linear-gradient(135deg, rgba(212,175,55,.12), rgba(255,255,255,.03) 45%, rgba(255,255,255,.015));
+      display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    }
+    .banner h3{font-size:34px;margin:0 0 8px}
+    .banner p{margin:0;color:var(--muted)}
+    .footer{padding:32px 0 52px;color:var(--soft);font-size:14px}
+    .footer-link{color:var(--muted);font-size:14px;transition:color .2s ease}
+    .footer-link:hover,.footer-link:focus-visible{color:#d4af37}
+    .fine{font-size:12px;line-height:1.7;color:#9e9585;margin-top:14px}
+
+    @media (max-width: 1080px){
+      .stat-grid{grid-template-columns:repeat(3,1fr)}
+      .hero-grid{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+    .hamburger{
+      display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;z-index:21;
+    }
+    .hamburger span{width:24px;height:2px;background:var(--gold-2);border-radius:2px;transition:transform .25s ease, opacity .25s ease}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    @media (max-width: 680px){
+      .nav-links{
+        flex-direction:column;position:absolute;top:88px;left:0;right:0;
+        background:rgba(8,8,8,.96);backdrop-filter:blur(14px);
+        padding:18px 24px;gap:16px;
+        border-bottom:1px solid rgba(212,175,55,.15);z-index:20;
+        opacity:0;visibility:hidden;transform:translateY(-8px);
+        transition:opacity .25s ease, visibility .25s ease, transform .25s ease;
+        pointer-events:none;
+      }
+      .nav-links.open{
+        opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;
+      }
+      .nav-links.open a{font-size:16px;padding:8px 0}
+      .hamburger{display:flex}
+      .nav .cta{padding:10px 16px;font-size:13px}
+      .stat-grid{grid-template-columns:repeat(2,1fr)}
+      .stat .value{font-size:28px}
+      .banner h3{font-size:28px}
+      .banner{flex-direction:column;text-align:center;padding:28px 20px}
+      .hero{padding-top:46px}
+    }
+  
+.equity-card{
+  margin: 36px 0 28px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(212,175,55,0.18);
+  background: linear-gradient(135deg, rgba(212,175,55,0.13), rgba(18,16,12,0.95) 45%, rgba(22,20,15,0.97));
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+}
+.equity-card svg{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+</style>
+
+<style id="rieve-upgrade">
+@keyframes goldTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes floatGlow {
+  0% { transform: translateY(0px) translateX(0px); opacity:.18; }
+  50% { transform: translateY(-10px) translateX(6px); opacity:.28; }
+  100% { transform: translateY(0px) translateX(0px); opacity:.18; }
+}
+@keyframes pulseNode {
+  0% { transform: scale(1); opacity:.35; }
+  50% { transform: scale(1.22); opacity:.7; }
+  100% { transform: scale(1); opacity:.35; }
+}
+@keyframes drawLine {
+  from { stroke-dashoffset: 1400; }
+  to { stroke-dashoffset: 0; }
+}
+@-webkit-keyframes drawLine {
+  from { stroke-dashoffset: 1400; }
+  to { stroke-dashoffset: 0; }
+}
+.neural-bg{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.neural-bg .orb{
+  position:absolute;
+  border-radius:999px;
+  animation: floatGlow 8s ease-in-out infinite;
+}
+.neural-bg .orb.one{
+  width:340px;height:340px;left:1%;top:8%;
+  background:radial-gradient(circle, rgba(212,175,55,.28) 0%, rgba(212,175,55,.10) 40%, rgba(212,175,55,0) 70%);
+}
+.neural-bg .orb.two{
+  width:300px;height:300px;right:4%;top:18%;
+  background:radial-gradient(circle, rgba(212,175,55,.24) 0%, rgba(212,175,55,.08) 40%, rgba(212,175,55,0) 70%);
+  animation-delay: -2s;
+}
+.neural-bg .orb.three{
+  width:380px;height:380px;left:12%;bottom:4%;
+  background:radial-gradient(circle, rgba(212,175,55,.20) 0%, rgba(212,175,55,.07) 40%, rgba(212,175,55,0) 70%);
+  animation-delay: -4s;
+}
+.neural-bg svg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:.24;
+}
+.neural-bg .node{
+  animation:pulseNode 4.5s ease-in-out infinite;
+  transform-origin:center;
+}
+body > * { position:relative; z-index:1; }
+.ticker-wrap{
+  overflow:hidden;
+  border-top:1px solid rgba(212,175,55,.16);
+  border-bottom:1px solid rgba(212,175,55,.16);
+  background:linear-gradient(180deg, rgba(16,16,16,.95), rgba(8,8,8,.95));
+}
+.ticker-track{
+  display:flex;
+  width:max-content;
+  animation:goldTicker 26s linear infinite;
+}
+.ticker-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 28px;
+  color:#e9d9a1;
+  font-weight:700;
+  letter-spacing:.03em;
+  white-space:nowrap;
+}
+.ticker-dot{
+  width:8px;height:8px;border-radius:999px;background:#d4af37;
+  box-shadow:0 0 14px rgba(212,175,55,.6);
+}
+.curve-animate{
+  stroke-dasharray:1400;
+  stroke-dashoffset:1400;
+  -webkit-animation:drawLine 3.6s ease forwards;
+  animation:drawLine 3.6s ease forwards;
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;
+}
+.curve-animate.play{
+  -webkit-animation-play-state:running;
+  animation-play-state:running;
+}
+.curve-animate.force-visible{
+  stroke-dashoffset:0 !important;
+  -webkit-animation:none !important;
+  animation:none !important;
+}
+.live-badges{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:18px;
+}
+.live-badge{
+  border:1px solid rgba(212,175,55,.22);
+  background:rgba(212,175,55,.06);
+  color:#f2d57a;
+  border-radius:999px;
+  padding:10px 16px;
+  font-size:13px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+</style>
+
+
+<style id="rieve-ai-upgrade-style">
+.ai-chip-section{
+  padding:34px 0;
+  background:linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,.35) 100%);
+}
+.ai-chip-title{
+  text-align:center;
+  margin:0 0 24px;
+  color:var(--gold, #d4af37);
+  font-size:38px;
+  letter-spacing:.02em;
+}
+.ai-chip-frame{
+  position:relative;
+  max-width:1100px;
+  margin:0 auto;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.22);
+  box-shadow:0 24px 80px rgba(0,0,0,.48);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(212,175,55,.24), transparent 35%),
+    linear-gradient(135deg, #15110a 0%, #0a0a0a 55%, #070707 100%);
+}
+.ai-chip-frame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(212,175,55,.12), rgba(0,0,0,0) 28%);
+  pointer-events:none;
+}
+.ai-chip-image{
+  width:100%;
+  display:block;
+  filter: grayscale(1) sepia(1) hue-rotate(350deg) saturate(3.8) brightness(.88) contrast(1.12);
+  opacity:.95;
+}
+.ai-chip-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at center, rgba(212,175,55,.22), transparent 30%),
+    linear-gradient(135deg, rgba(212,175,55,.32), rgba(0,0,0,0) 38%, rgba(0,0,0,.08) 100%);
+  pointer-events:none;
+}
+.ai-chip-copy{
+  max-width:900px;
+  margin:26px auto 0;
+  text-align:center;
+  color:var(--muted, #bdb6a6);
+  font-size:18px;
+  line-height:1.7;
+}
+</style>
+
+
+<style id="gold-lines-style">
+.gold-lines{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+opacity:0.08;
+background:
+linear-gradient(120deg,#d4af37 1px,transparent 1px),
+linear-gradient(60deg,#d4af37 1px,transparent 1px);
+background-size:120px 120px;
+animation: movegrid 18s linear infinite;
+}
+
+@keyframes movegrid{
+0%{background-position:0 0,0 0;}
+100%{background-position:120px 120px,120px 120px;}
+}
+</style>
+
+
+<style id="spacing-polish-fix">
+/* gold shimmer animation for capacity bar */
+@keyframes goldShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+/* global polish */
+section{padding-top:34px !important;padding-bottom:34px !important;}
+footer{margin-top:24px !important;padding:24px 20px 32px !important;}
+h2{margin-top:0 !important;margin-bottom:10px !important;}
+p{margin-top:6px !important;margin-bottom:10px !important;}
+
+/* tighter blocks */
+.live-badges{margin-top:10px !important;margin-bottom:8px !important;}
+.capacity-sub{max-width:760px;margin-left:auto !important;margin-right:auto !important;}
+/* tighten the strategy capacity section */
+section:has(h2){scroll-margin-top:72px;}
+/* mobile specific */
+@media (max-width: 900px){
+  section{padding-top:26px !important;padding-bottom:26px !important;}
+  h2{margin-bottom:8px !important;}
+  p{margin-top:4px !important;margin-bottom:8px !important;}
+  footer{margin-top:18px !important;padding:20px 18px 28px !important;}
+  .live-badges{margin-top:8px !important;margin-bottom:4px !important;}
+}
+/* AI chart metrics grid responsive */
+@media (max-width:1024px){
+  .ai-metrics-row{grid-template-columns:repeat(3,1fr) !important;}
+}
+@media (max-width:768px){
+  .ai-metrics-row{grid-template-columns:repeat(2,1fr) !important;}
+}
+@media (max-width:480px){
+  .ai-metrics-row{grid-template-columns:1fr !important;}
+}
+/* Broker trust section responsive */
+@media (max-width:768px){
+  .broker-grid{grid-template-columns:1fr !important;}
+}
+/* Accessibility: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
+  html{scroll-behavior:auto}
+  .curve-animate{stroke-dashoffset:0 !important;animation:none !important}
+  .neural-bg .orb{animation:none !important}
+  .neural-bg .node{animation:none !important}
+  .gold-lines{animation:none !important}
+}
+/* iOS: dial down glow bloom — Safari on iPhone/iPad renders SVG blur and
+   box-shadow glows noticeably brighter than desktop. Scoped via the
+   iOS-only @supports (-webkit-touch-callout) and a touch-device fallback
+   so iPadOS in desktop-UA mode is also covered. */
+@supports (-webkit-touch-callout: none) {
+  svg [filter="url(#glow)"]{opacity:0.09 !important}
+  svg [filter="url(#simGlow)"]{opacity:0.35 !important}
+  svg [filter="url(#simSoftGlow)"]{opacity:0.38 !important}
+  .ticker-dot{box-shadow:0 0 3px rgba(212,175,55,.2) !important}
+  .nav .cta{animation:none !important}
+}
+@media (hover: none) and (pointer: coarse){
+  svg [filter="url(#glow)"]{opacity:0.09 !important}
+  svg [filter="url(#simGlow)"]{opacity:0.35 !important}
+  svg [filter="url(#simSoftGlow)"]{opacity:0.38 !important}
+  .ticker-dot{box-shadow:0 0 3px rgba(212,175,55,.2) !important}
+  .nav .cta{animation:none !important}
+}
+</style>
+
+<style id="polish-10x">
+/* ── Skip navigation ── */
+.skip-nav{
+  position:absolute;top:-100%;left:50%;transform:translateX(-50%);
+  padding:12px 24px;background:var(--gold);color:#16120b;font-weight:700;
+  border-radius:0 0 12px 12px;z-index:100;transition:top .2s ease;
+  font-size:14px;
+}
+.skip-nav:focus{top:0}
+
+/* ── Scroll progress bar ── */
+.scroll-progress{
+  position:fixed;top:0;left:0;width:100%;height:3px;z-index:99;
+  background:linear-gradient(90deg,var(--gold),var(--gold-2));
+  transform-origin:left;transform:scaleX(0);
+  pointer-events:none;
+}
+
+/* ── Page load animation ── */
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.hero .eyebrow{opacity:0;animation:fadeInUp .65s cubic-bezier(.16,1,.3,1) .1s both}
+.hero h1{opacity:0;animation:fadeInUp .65s cubic-bezier(.16,1,.3,1) .22s both}
+.hero p{opacity:0;animation:fadeInUp .65s cubic-bezier(.16,1,.3,1) .36s both}
+.hero .actions{opacity:0;animation:fadeInUp .65s cubic-bezier(.16,1,.3,1) .5s both}
+
+/* ── Scroll reveal ── */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.revealed{
+  opacity:1;transform:translateY(0);
+}
+
+/* stagger children */
+.reveal-stagger > *{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1);
+}
+.reveal-stagger.revealed > *{opacity:1;transform:translateY(0)}
+.reveal-stagger.revealed > *:nth-child(1){transition-delay:.05s}
+.reveal-stagger.revealed > *:nth-child(2){transition-delay:.1s}
+.reveal-stagger.revealed > *:nth-child(3){transition-delay:.15s}
+.reveal-stagger.revealed > *:nth-child(4){transition-delay:.2s}
+.reveal-stagger.revealed > *:nth-child(5){transition-delay:.25s}
+.reveal-stagger.revealed > *:nth-child(6){transition-delay:.3s}
+
+/* ── Back to top button ── */
+.back-to-top{
+  position:fixed;bottom:32px;right:32px;z-index:50;
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  color:#16120b;border:none;cursor:pointer;
+  display:grid;place-items:center;
+  box-shadow:0 8px 28px rgba(212,175,55,.25);
+  opacity:0;transform:translateY(20px);
+  transition:opacity .3s ease, transform .3s ease, box-shadow .2s ease;
+  pointer-events:none;
+}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{box-shadow:0 12px 36px rgba(212,175,55,.5);transform:translateY(-3px)}
+.back-to-top:active{transform:translateY(0)}
+.back-to-top svg{width:20px;height:20px}
+
+/* ── Enhanced stat card hover ── */
+.stat{position:relative;overflow:visible}
+.stat::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%, rgba(212,175,55,.18), transparent 70%);
+  opacity:0;transition:opacity .35s ease;pointer-events:none;border-radius:inherit;
+}
+.stat:hover::after{opacity:1}
+
+/* ── Section divider ── */
+.section-divider{
+  display:block;height:1px;max-width:180px;margin:0 auto;border:none;
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,.35),transparent);
+}
+
+/* ── Smooth image / card entrance for equity card ── */
+.equity-card{
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.equity-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 28px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(212,175,55,.12);
+}
+
+/* ── Quote block polish ── */
+.quote{
+  position:relative;
+  font-style:italic;
+}
+.quote::before{
+  content:'\201C';
+  position:absolute;top:-8px;left:12px;
+  font-size:48px;line-height:1;color:rgba(212,175,55,.25);
+  font-style:normal;font-family:Georgia,serif;
+}
+
+/* ── Very small screens ── */
+@media(max-width:400px){
+  .stat-grid{grid-template-columns:1fr !important}
+  h1{font-size:34px !important}
+  .banner h3{font-size:22px !important}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .cta,.actions .ghost{width:100%;text-align:center;justify-content:center}
+  .back-to-top{bottom:20px;right:20px;width:42px;height:42px}
+  .ai-metrics-row{grid-template-columns:1fr !important}
+}
+
+/* ── Nav CTA subtle pulse on load ── */
+@keyframes ctaPulse{
+  0%,100%{box-shadow:0 10px 30px rgba(212,175,55,.18)}
+  50%{box-shadow:0 10px 30px rgba(212,175,55,.38)}
+}
+.nav .cta{animation:ctaPulse 3s ease-in-out 2s 2}
+
+/* ── Capacity bar smoothing ── */
+.capacity-label{
+  display:inline-block;
+  padding:4px 12px;border-radius:999px;
+  background:rgba(212,175,55,.12);
+  color:var(--gold);font-size:13px;font-weight:700;
+  margin-bottom:8px;
+}
+</style>
+
+</head>
+<body>
+
+<noscript><style>
+.reveal,.reveal-stagger,.reveal-stagger>*{opacity:1!important;transform:none!important;transition:none!important}
+.curve-animate{stroke-dashoffset:0!important;animation:none!important}
+</style></noscript>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<div class="neural-bg" aria-hidden="true">
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+  <svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#d4af37" stroke-width="1.2" fill="none">
+      <line x1="140" y1="160" x2="340" y2="250"/>
+      <line x1="340" y1="250" x2="560" y2="170"/>
+      <line x1="560" y1="170" x2="760" y2="290"/>
+      <line x1="760" y1="290" x2="970" y2="210"/>
+      <line x1="970" y1="210" x2="1230" y2="300"/>
+      <line x1="220" y1="610" x2="430" y2="520"/>
+      <line x1="430" y1="520" x2="680" y2="640"/>
+      <line x1="680" y1="640" x2="930" y2="560"/>
+      <line x1="930" y1="560" x2="1230" y2="680"/>
+      <line x1="560" y1="170" x2="430" y2="520"/>
+      <line x1="760" y1="290" x2="680" y2="640"/>
+      <line x1="970" y1="210" x2="930" y2="560"/>
+    </g>
+    <g fill="#d4af37">
+      <circle class="node" cx="140" cy="160" r="5"/>
+      <circle class="node" cx="340" cy="250" r="5"/>
+      <circle class="node" cx="560" cy="170" r="5"/>
+      <circle class="node" cx="760" cy="290" r="5"/>
+      <circle class="node" cx="970" cy="210" r="5"/>
+      <circle class="node" cx="1230" cy="300" r="5"/>
+      <circle class="node" cx="220" cy="610" r="5"/>
+      <circle class="node" cx="430" cy="520" r="5"/>
+      <circle class="node" cx="680" cy="640" r="5"/>
+      <circle class="node" cx="930" cy="560" r="5"/>
+      <circle class="node" cx="1230" cy="680" r="5"/>
+    </g>
+  </svg>
+</div>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a href="#" class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        <div class="crest"><img src="/assets/pg3ai-logo.jpg" alt="PG3 AI logo" width="46" height="46" loading="eager" decoding="async"/></div>
+        <div>
+          <div>PG3 AI</div>
+          <div style="font-size:12px;color:var(--soft);font-weight:600">ProGold System</div>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#performance">Performance</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#risk">Risk</a>
+        <a href="#invest">Invest</a>
+      </div>
+      <button class="hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+  <section class="hero wrap">
+<div class="gold-lines" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div>
+        <img class="hero-logo" src="/assets/pg3ai-logo.jpg" alt="PG3 AI — Designed for Serious Capital" width="200" height="200" loading="eager" decoding="async"/>
+        <div class="eyebrow">PREMIUM GOLD SYSTEM</div>
+        <h1><span class="gradient">Institutional Gold<br>Performance.</span> <br>Built for Investor Trust.</h1>
+        <p>
+          PG3 AI is a systematic gold trading strategy built on disciplined risk management and full performance transparency. Every position is executed with precision, and every result is openly reported — giving investors the clarity and confidence they deserve.
+        </p>
+        <div class="actions">
+          <a class="ghost" href="#performance">View Metrics</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats wrap" id="performance">
+
+<!-- LIVE PERFORMANCE HEADER -->
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+  <div>
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.25);margin-bottom:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,.6);display:inline-block;">
+        <span style="display:block;width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulseNode 2s ease-in-out infinite;"></span>
+      </span>
+      <span style="color:#4ade80;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">LIVE TRADING — REAL RETURNS</span>
+    </div>
+    <h2 style="color:#f5f2e8;font-size:28px;margin:0;letter-spacing:-.01em;">PG3 AI Equity Curve</h2>
+    <p style="color:#8f876f;font-size:14px;margin:4px 0 0;">Live account performance</p>
+  </div>
+  <div style="text-align:right;">
+    <div style="color:#f2d57a;font-size:32px;font-weight:800;">+313.79%</div>
+    <div style="color:#8f876f;font-size:12px;letter-spacing:.06em;">TOTAL LIVE RETURN</div>
+  </div>
+</div>
+
+    <div class="equity-card">
+<svg viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Equity curve">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1912"/>
+      <stop offset="55%" stop-color="#141210"/>
+      <stop offset="100%" stop-color="#111010"/>
+    </linearGradient>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6c65c" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#c79e2a" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#1a1610" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="620" rx="28" fill="url(#bgGrad)"/>
+
+  <g opacity="0.28" stroke="#caa741" stroke-width="1">
+    <line x1="90" y1="393" x2="1130" y2="393"/>
+    <line x1="90" y1="256" x2="1130" y2="256"/>
+    <line x1="90" y1="119" x2="1130" y2="119"/>
+  </g>
+
+  <g stroke="#8c6f22" stroke-width="2" opacity="0.75">
+    <line x1="90" y1="50" x2="90" y2="530"/>
+    <line x1="90" y1="530" x2="1130" y2="530"/>
+  </g>
+
+  <g fill="#d2b257" font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="92" y="34" font-size="24" font-weight="700">PG3 AI Equity Curve</text>
+    <text x="92" y="580" font-size="18">02 Feb</text>
+    <text x="255" y="580" font-size="18">10 Mar</text>
+    <text x="418" y="580" font-size="18">17 Mar</text>
+    <text x="581" y="580" font-size="18">24 Mar</text>
+    <text x="744" y="580" font-size="18">31 Mar</text>
+    <text x="907" y="580" font-size="18">07 Apr</text>
+    <text x="1050" y="580" font-size="18">04 May</text>
+
+    <text x="30" y="535" font-size="18">0</text>
+    <text x="14" y="397" font-size="18">100</text>
+    <text x="14" y="260" font-size="18">200</text>
+    <text x="14" y="123" font-size="18">300</text>
+  </g>
+
+  <path d="M90,530
+           L125,525
+           L159,521
+           L194,515
+           L229,507
+           L264,496
+           L298,481
+           L333,463
+           L368,441
+           L403,427
+           L437,418
+           L472,437
+           L507,450
+           L542,441
+           L576,416
+           L611,384
+           L646,344
+           L681,304
+           L715,258
+           L750,227
+           L785,201
+           L820,180
+           L854,161
+           L889,147
+           L924,136
+           L959,125
+           L993,119
+           L1028,113
+           L1063,107
+           L1130,100
+           L1130,530 Z"
+        fill="url(#areaGrad)" opacity="0.95"/>
+
+  <!-- Glow layer (static, rendered beneath the animated line for iOS compatibility) -->
+  <path d="M90,530
+           L125,525
+           L159,521
+           L194,515
+           L229,507
+           L264,496
+           L298,481
+           L333,463
+           L368,441
+           L403,427
+           L437,418
+           L472,437
+           L507,450
+           L542,441
+           L576,416
+           L611,384
+           L646,344
+           L681,304
+           L715,258
+           L750,227
+           L785,201
+           L820,180
+           L854,161
+           L889,147
+           L924,136
+           L959,125
+           L993,119
+           L1028,113
+           L1063,107
+           L1130,100"
+        fill="none" stroke="#f1cf67" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.35" filter="url(#glow)"/>
+
+  <path d="M90,530
+           L125,525
+           L159,521
+           L194,515
+           L229,507
+           L264,496
+           L298,481
+           L333,463
+           L368,441
+           L403,427
+           L437,418
+           L472,437
+           L507,450
+           L542,441
+           L576,416
+           L611,384
+           L646,344
+           L681,304
+           L715,258
+           L750,227
+           L785,201
+           L820,180
+           L854,161
+           L889,147
+           L924,136
+           L959,125
+           L993,119
+           L1028,113
+           L1063,107
+           L1130,100"
+        fill="none" stroke="#f1cf67" stroke-width="6" class="curve-animate" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#f1cf67" stroke="#2a2518" stroke-width="2">
+    <circle cx="298" cy="481" r="6"/>
+    <circle cx="437" cy="418" r="6"/>
+    <circle cx="542" cy="441" r="6"/>
+    <circle cx="715" cy="258" r="6"/>
+    <circle cx="924" cy="136" r="6"/>
+    <circle cx="1130" cy="100" r="7"/>
+  </g>
+
+  <rect x="1.5" y="1.5" width="1197" height="617" rx="28" fill="none" stroke="#6b5522" stroke-width="3" opacity="0.85"/>
+</svg>
+</div>
+<div class="stat-grid reveal reveal-stagger">
+      <div class="stat">
+        <div class="label">Total Return</div>
+        <div class="value gradient">313.79%</div>
+        <div class="sub">Cumulative net return since live account inception.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Profit Factor</div>
+        <div class="value">5.31</div>
+        <div class="sub">Shows how much gross profit the system generates for every $1 of gross loss.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Expectancy</div>
+        <div class="value">376.5 pips</div>
+        <div class="sub">Measures the average edge generated per trade across the live track record.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Win Rate</div>
+        <div class="value gradient">78.56%</div>
+        <div class="sub">Percentage of trades closed in profit.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Peak Gain</div>
+        <div class="value gradient">472.39%</div>
+        <div class="sub">Highest single-position gain recorded since inception.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Max Drawdown</div>
+        <div class="value">29.67%</div>
+        <div class="sub">Largest peak-to-trough equity decline. Reported for full transparency.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" aria-hidden="true">
+  <section class="section wrap" id="strategy">
+    <div class="panel reveal">
+      <h2>Strategy Overview</h2>
+      <p>
+        ProGold AI is a hybrid human-AI model built exclusively for XAUUSD — pairing experienced trader insight with algorithmic intelligence to capture gold's most asymmetric opportunities.
+      </p>
+      <div class="list">
+        <div class="item">
+          <div class="dot">01</div>
+          <div>
+            <strong>AI-Powered Macro Synthesis</strong><br>
+            <span style="color:var(--muted)">Real-time ingestion of central bank signals, inflation data, and USD correlations — executing when macro catalysts align with technical momentum.</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="dot">02</div>
+          <div>
+            <strong>Adaptive Momentum Architecture</strong><br>
+            <span style="color:var(--muted)">Multi-timeframe signal layering with dynamic position sizing that scales conviction to realized volatility — not static lot sizes.</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="dot">03</div>
+          <div>
+            <strong>Institutional Execution Standards</strong><br>
+            <span style="color:var(--muted)">Low-latency, slippage-aware order routing. No high-spread entries, no thin-liquidity windows. Every trade is logged and auditable.</span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="dot">04</div>
+          <div>
+            <strong>Continuous Model Evolution</strong><br>
+            <span style="color:var(--muted)">Walk-forward optimization with regime detection across risk-on, risk-off, and range-bound environments — preventing curve-fitting to outdated conditions.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" aria-hidden="true">
+  <section class="section wrap" id="risk">
+    <div class="panel reveal">
+      <h2>Risk Framing</h2>
+      <p>
+        A 29.67% maximum drawdown is not incidental — it is a structural characteristic of a strategy designed to capture outsized returns in one of the world's most volatile asset classes. We publish it because serious allocators demand transparency.
+      </p>
+      <p>
+        Multi-layered risk controls are embedded in the architecture: hard stop-losses on every position, daily drawdown limits, correlation-based exposure caps, and automatic de-leveraging when volatility exceeds predefined thresholds.
+      </p>
+      <p>
+        Drawdown periods are an expected part of the return profile, not an anomaly. The 78.56% win rate demonstrates consistent trade selection — but past performance does not guarantee future results.
+      </p>
+      <div class="quote">
+        "Any strategy that promises high returns without acknowledging the cost of those returns is selling a fantasy. We publish our drawdown alongside our profits because serious capital allocators demand nothing less."
+      </div>
+      <div class="mini-chart" aria-hidden="true">
+        <svg viewBox="0 0 1000 300" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="rgba(212,175,55,.45)"/>
+              <stop offset="100%" stop-color="rgba(212,175,55,0)"/>
+            </linearGradient>
+          </defs>
+          <g opacity="0.18" stroke="#fff">
+            <line x1="0" y1="40" x2="1000" y2="40"/>
+            <line x1="0" y1="100" x2="1000" y2="100"/>
+            <line x1="0" y1="160" x2="1000" y2="160"/>
+            <line x1="0" y1="220" x2="1000" y2="220"/>
+          </g>
+          <path d="M0,245 C90,238 125,198 180,192 C230,186 260,212 310,178 C360,145 395,132 455,114 C520,95 565,126 630,88 C710,42 790,68 860,32 C904,10 952,18 1000,12 L1000,300 L0,300 Z" fill="url(#g1)"></path>
+          <path d="M0,245 C90,238 125,198 180,192 C230,186 260,212 310,178 C360,145 395,132 455,114 C520,95 565,126 630,88 C710,42 790,68 860,32 C904,10 952,18 1000,12" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Broker Trust Section -->
+  <hr class="section-divider" aria-hidden="true">
+  <section style="padding:48px 0 36px;">
+    <div class="reveal" style="max-width:900px;margin:0 auto;padding:0 24px;text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 18px;border-radius:999px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.15);margin-bottom:18px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">Tier-1 Regulated Broker</span>
+      </div>
+      <h2 style="color:var(--text);font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:0 0 10px;line-height:1.2;">
+        Executed Through <span style="color:#d4af37;">FP Markets / AxiTrader</span>
+      </h2>
+      <p style="color:var(--muted);font-size:16px;line-height:1.7;max-width:640px;margin:0 auto 28px;">
+        All trades are executed through FP Markets and AxiTrader — globally recognized brokers with triple Tier-1 regulatory licensing across three major jurisdictions.
+      </p>
+      <div class="broker-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto;">
+        <!-- ASIC License -->
+        <div style="padding:22px 18px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">ASIC</div>
+          <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">Australia</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Australian Securities &amp; Investments Commission — one of the world's strictest financial regulators.</div>
+        </div>
+        <!-- CySEC License -->
+        <div style="padding:22px 18px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">CySEC</div>
+          <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">Cyprus (EU)</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Cyprus Securities &amp; Exchange Commission — full EU regulatory framework with MiFID II compliance.</div>
+        </div>
+        <!-- FCA License -->
+        <div style="padding:22px 18px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">FCA</div>
+          <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">United Kingdom</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Financial Conduct Authority — one of the world's most respected financial regulators, ensuring the highest standards of conduct.</div>
+        </div>
+      </div>
+      <p style="color:var(--soft);font-size:12px;margin-top:20px;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto;">
+        Triple Tier-1 regulation means client funds are held in segregated accounts with strict capital adequacy requirements — providing an added layer of protection for your capital.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="invest">
+    <hr class="section-divider" aria-hidden="true" style="margin-bottom:28px">
+    <div class="banner reveal">
+      <div>
+        <h3>Begin Your Allocation</h3>
+        <p>Gain exposure to a disciplined, transparency-first gold trading strategy — purpose-built for serious allocators.</p>
+        <div class="fine">Minimum investment: $20,000 USD. Past performance does not guarantee future results. All trading involves risk.</div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Bridge: Live → Simulated -->
+<div style="text-align:center;padding:28px 24px 8px;max-width:800px;margin:0 auto;">
+  <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="width:8px;height:8px;border-radius:50%;background:#d4af37;display:inline-block;"></span>
+      <span style="color:#d4af37;font-size:13px;font-weight:700;">7-YEAR SIMULATED BACKTEST</span>
+    </div>
+  </div>
+  <p style="color:#887a68;font-size:13px;margin-top:8px;line-height:1.6;">
+    The live results above reflect real account performance; the simulated backtest below applies the same AI model logic to seven years of historical XAUUSD data for additional context.
+  </p>
+</div>
+
+<hr class="section-divider" aria-hidden="true">
+<section style="padding:48px 0 40px;background:linear-gradient(180deg,#070707 0%,#0a0908 100%);">
+<div class="reveal" style="max-width:1200px;margin:auto;padding:0 24px;text-align:center;">
+
+<!-- Section header -->
+<div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.18);margin-bottom:14px;">
+  <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">SIMULATED BACKTEST</span>
+  <span style="width:5px;height:5px;border-radius:50%;background:#d4af37;display:inline-block;opacity:.5;"></span>
+  <span style="color:#8f876f;font-size:11px;font-weight:600;letter-spacing:.06em;">BASED ON AI MODEL LOGIC</span>
+</div>
+
+<h2 style="color:#f5f2e8;font-size:42px;margin-bottom:6px;letter-spacing:-.02em;">
+Long‑Term Simulated Performance
+</h2>
+<p style="color:#8f876f;font-size:17px;margin:0 auto 28px;max-width:720px;">
+Hypothetical returns of PG3 AI from January 2019 onward — modeled on the same execution logic, risk parameters, and signal architecture powering the live account today. Benchmarked against passive gold buy‑and‑hold.
+</p>
+
+<div style="
+background:linear-gradient(135deg,rgba(212,175,55,.06),#0b0b0b 40%,#090909);
+border:1px solid rgba(212,175,55,0.22);
+border-radius:24px;
+padding:24px 24px 18px;
+box-shadow:0 30px 80px rgba(0,0,0,0.55);
+position:relative;
+overflow:hidden;
+">
+
+<!-- chart legend -->
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px;padding:0 8px;">
+  <div style="display:flex;align-items:center;gap:24px;">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="width:28px;height:4px;border-radius:4px;background:linear-gradient(90deg,#f1cf67,#d4af37);display:inline-block;"></span>
+      <span style="color:#f2d57a;font-size:13px;font-weight:700;letter-spacing:.04em;">PG3 AI (SIMULATED)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <span style="width:28px;height:4px;border-radius:4px;background:rgba(255,255,255,.25);display:inline-block;"></span>
+      <span style="color:#666;font-size:13px;font-weight:600;letter-spacing:.04em;">GOLD BUY &amp; HOLD</span>
+    </div>
+  </div>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <span style="color:#d4af37;font-size:13px;font-weight:700;">+841.2% AI strategy</span>
+    <span style="color:#666;font-size:13px;font-weight:600;">+92.7% gold</span>
+  </div>
+</div>
+
+<!-- MAIN CHART SVG — 2019 to 2026 (7 years simulated) -->
+<svg viewBox="0 0 1200 620" style="width:100%;border-radius:16px;background:radial-gradient(ellipse at 30% 20%,rgba(212,175,55,.12),#141210 60%);" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simulated 7-year backtest equity curve comparing PG3 AI strategy against gold buy-and-hold from January 2019 to May 2026">
+
+<defs>
+  <linearGradient id="simGradFill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f1cf67" stop-opacity="0.35"/>
+    <stop offset="45%" stop-color="#c49a20" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#141210" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="simStroke" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#e8c44e"/>
+    <stop offset="50%" stop-color="#f2d57a"/>
+    <stop offset="100%" stop-color="#d4af37"/>
+  </linearGradient>
+  <linearGradient id="simBench" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="rgba(255,255,255,.22)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,.18)"/>
+  </linearGradient>
+  <filter id="simGlow">
+    <feGaussianBlur stdDeviation="5" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="simSoftGlow">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- monthly candle pattern for texture -->
+  <pattern id="monthGrid" x="0" y="0" width="17.14" height="100%" patternUnits="userSpaceOnUse">
+    <line x1="17.14" y1="0" x2="17.14" y2="600" stroke="rgba(255,255,255,.03)" stroke-width="0.5"/>
+  </pattern>
+</defs>
+
+<!-- subtle monthly grid texture -->
+<rect x="80" y="50" width="1080" height="460" fill="url(#monthGrid)"/>
+
+<!-- background grid -->
+<g stroke="rgba(255,255,255,.10)" stroke-width="1">
+  <line x1="80" y1="80" x2="1160" y2="80"/>
+  <line x1="80" y1="130" x2="1160" y2="130"/>
+  <line x1="80" y1="180" x2="1160" y2="180"/>
+  <line x1="80" y1="230" x2="1160" y2="230"/>
+  <line x1="80" y1="280" x2="1160" y2="280"/>
+  <line x1="80" y1="330" x2="1160" y2="330"/>
+  <line x1="80" y1="380" x2="1160" y2="380"/>
+  <line x1="80" y1="430" x2="1160" y2="430"/>
+  <line x1="80" y1="480" x2="1160" y2="480"/>
+  <!-- vertical year markers -->
+  <line x1="80" y1="50" x2="80" y2="510"/>
+  <line x1="217" y1="50" x2="217" y2="510"/>
+  <line x1="354" y1="50" x2="354" y2="510"/>
+  <line x1="491" y1="50" x2="491" y2="510"/>
+  <line x1="629" y1="50" x2="629" y2="510"/>
+  <line x1="766" y1="50" x2="766" y2="510"/>
+  <line x1="903" y1="50" x2="903" y2="510"/>
+  <line x1="1040" y1="50" x2="1040" y2="510"/>
+  <line x1="1160" y1="50" x2="1160" y2="510"/>
+</g>
+
+<!-- axes -->
+<g stroke="rgba(212,175,55,.25)" stroke-width="1.5">
+  <line x1="80" y1="505" x2="1160" y2="505"/>
+  <line x1="80" y1="50" x2="80" y2="505"/>
+</g>
+
+<!-- Y-axis labels (% return) — up to +900% -->
+<g fill="#887a68" font-family="Inter,Arial,sans-serif" font-size="11" text-anchor="end">
+  <text x="72" y="508">0%</text>
+  <text x="72" y="458">+100%</text>
+  <text x="72" y="408">+200%</text>
+  <text x="72" y="358">+300%</text>
+  <text x="72" y="308">+400%</text>
+  <text x="72" y="258">+500%</text>
+  <text x="72" y="208">+600%</text>
+  <text x="72" y="158">+700%</text>
+  <text x="72" y="108">+800%</text>
+  <text x="72" y="60">+900%</text>
+</g>
+
+<!-- X-axis labels (years) -->
+<g fill="#887a68" font-family="Inter,Arial,sans-serif" font-size="13" text-anchor="middle" font-weight="600">
+  <text x="80" y="530">2019</text>
+  <text x="217" y="530">2020</text>
+  <text x="354" y="530">2021</text>
+  <text x="491" y="530">2022</text>
+  <text x="629" y="530">2023</text>
+  <text x="766" y="530">2024</text>
+  <text x="903" y="530">2025</text>
+  <text x="1040" y="530">2026</text>
+</g>
+
+<!-- ============================================= -->
+<!-- GOLD BUY & HOLD benchmark (Jan 2019 → May 2026) -->
+<!-- Gold ~$1280 → ~$2470 = +92.7% -->
+<!-- ============================================= -->
+<path d="M80,505
+  C100,503 120,500 148,497
+  C176,494 196,490 217,486
+  C238,482 258,477 280,474
+  C302,471 322,468 354,462
+  C376,456 396,460 415,464
+  C434,468 452,472 474,468
+  C491,464 510,458 530,453
+  C550,448 570,444 590,440
+  C610,436 620,434 629,430
+  C650,426 670,420 690,418
+  C710,416 730,418 748,414
+  C766,410 785,404 805,398
+  C825,392 845,386 864,378
+  C883,370 903,364 920,358
+  C937,352 955,348 972,344
+  C989,340 1008,336 1040,330
+  C1060,326 1080,322 1100,317
+  C1120,312 1140,308 1160,304"
+  fill="none" stroke="url(#simBench)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6" opacity=".55"/>
+
+<!-- ============================================= -->
+<!-- STRATEGY AREA FILL (realistic curve with drawdowns) -->
+<!-- Jan 2019 start → ~+841% by May 2026 -->
+<!-- ============================================= -->
+<path d="M80,505
+  C95,503 110,499 130,494
+  C150,489 165,482 183,475
+  C201,468 212,462 217,457
+  C232,448 246,436 265,425
+  C284,414 296,418 310,424
+  C324,430 336,438 354,430
+  C372,422 388,410 405,398
+  C422,386 438,380 456,374
+  C474,368 483,364 491,358
+  C509,348 522,340 540,348
+  C558,356 570,365 585,358
+  C600,351 615,340 629,330
+  C647,318 660,310 678,300
+  C696,290 710,284 725,276
+  C740,268 753,260 766,252
+  C784,240 796,234 810,226
+  C824,218 836,222 850,216
+  C864,210 878,198 892,186
+  C903,178 916,168 930,158
+  C944,148 958,142 974,135
+  C990,128 1004,122 1020,115
+  C1040,106 1056,100 1072,93
+  C1088,86 1100,82 1115,78
+  C1130,74 1145,72 1160,68
+  L1160,505 Z"
+  fill="url(#simGradFill)" opacity=".85"/>
+
+<!-- ============================================= -->
+<!-- STRATEGY MAIN LINE -->
+<!-- ============================================= -->
+<path d="M80,505
+  C95,503 110,499 130,494
+  C150,489 165,482 183,475
+  C201,468 212,462 217,457
+  C232,448 246,436 265,425
+  C284,414 296,418 310,424
+  C324,430 336,438 354,430
+  C372,422 388,410 405,398
+  C422,386 438,380 456,374
+  C474,368 483,364 491,358
+  C509,348 522,340 540,348
+  C558,356 570,365 585,358
+  C600,351 615,340 629,330
+  C647,318 660,310 678,300
+  C696,290 710,284 725,276
+  C740,268 753,260 766,252
+  C784,240 796,234 810,226
+  C824,218 836,222 850,216
+  C864,210 878,198 892,186
+  C903,178 916,168 930,158
+  C944,148 958,142 974,135
+  C990,128 1004,122 1020,115
+  C1040,106 1056,100 1072,93
+  C1088,86 1100,82 1115,78
+  C1130,74 1145,72 1160,68"
+  fill="none" stroke="url(#simStroke)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#simGlow)"/>
+
+<!-- ============================================= -->
+<!-- KEY MILESTONE DOTS -->
+<!-- ============================================= -->
+<g filter="url(#simSoftGlow)">
+  <!-- 2019 Q3 — initial traction -->
+  <circle cx="160" cy="486" r="4" fill="#f1cf67" stroke="#1a1400" stroke-width="1.5"/>
+  <!-- 2020 COVID gold surge — big move captured -->
+  <circle cx="265" cy="425" r="5" fill="#f1cf67" stroke="#1a1400" stroke-width="2"/>
+  <!-- 2020 late — pullback low -->
+  <circle cx="310" cy="424" r="4" fill="#f1cf67" stroke="#1a1400" stroke-width="1.5"/>
+  <!-- 2021 mid — recovery & new highs -->
+  <circle cx="405" cy="398" r="5" fill="#f1cf67" stroke="#1a1400" stroke-width="2"/>
+  <!-- 2022 mid — sideways grind through rate hikes -->
+  <circle cx="540" cy="348" r="4" fill="#f1cf67" stroke="#1a1400" stroke-width="1.5"/>
+  <!-- 2023 Q2 — breakout begins -->
+  <circle cx="678" cy="300" r="5" fill="#f1cf67" stroke="#1a1400" stroke-width="2"/>
+  <!-- 2024 — gold ATH rally captured -->
+  <circle cx="810" cy="226" r="5" fill="#f1cf67" stroke="#1a1400" stroke-width="2"/>
+  <!-- 2025 Q1 — continued acceleration -->
+  <circle cx="930" cy="158" r="5" fill="#f1cf67" stroke="#1a1400" stroke-width="2"/>
+  <!-- Current point May 2026 -->
+  <circle cx="1160" cy="68" r="6" fill="#f1cf67" stroke="#1a1400" stroke-width="2.5"/>
+  <circle cx="1160" cy="68" r="12" fill="none" stroke="rgba(241,207,103,.35)" stroke-width="2">
+    <animate attributeName="r" values="10;18;10" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<!-- ============================================= -->
+<!-- DRAWDOWN ZONES (realistic pullbacks) -->
+<!-- ============================================= -->
+<g opacity=".14">
+  <!-- 2020 Q3 drawdown: -28.4% -->
+  <rect x="286" y="400" width="52" height="48" rx="4" fill="#ff4444"/>
+  <!-- 2022 H1 rate shock drawdown: -20.3% -->
+  <rect x="502" y="320" width="58" height="50" rx="4" fill="#ff4444"/>
+  <!-- 2024 Q1 mild pullback: -12.4% -->
+  <rect x="820" y="206" width="36" height="26" rx="4" fill="#ff4444"/>
+</g>
+<g font-family="Inter,Arial,sans-serif" font-size="9" fill="rgba(255,100,100,.55)">
+  <text x="312" y="460">-28.4%</text>
+  <text x="531" y="384">-20.3%</text>
+  <text x="838" y="244">-12.4%</text>
+</g>
+
+<!-- ============================================= -->
+<!-- ANNOTATIONS -->
+<!-- ============================================= -->
+
+<!-- COVID Gold Surge — 2020 -->
+<g>
+  <line x1="265" y1="425" x2="265" y2="556" stroke="rgba(212,175,55,.3)" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="195" y="556" width="140" height="36" rx="8" fill="rgba(212,175,55,.08)" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+  <text x="265" y="570" fill="#d4af37" font-size="10" font-family="Inter,Arial,sans-serif" text-anchor="middle" font-weight="700">COVID GOLD SURGE</text>
+  <text x="265" y="584" fill="#8f876f" font-size="9" font-family="Inter,Arial,sans-serif" text-anchor="middle">AI captured +78%</text>
+</g>
+
+<!-- Fed Rate Hikes — 2022 -->
+<g>
+  <line x1="491" y1="358" x2="491" y2="556" stroke="rgba(212,175,55,.3)" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="421" y="556" width="140" height="36" rx="8" fill="rgba(212,175,55,.08)" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+  <text x="491" y="570" fill="#d4af37" font-size="10" font-family="Inter,Arial,sans-serif" text-anchor="middle" font-weight="700">FED RATE HIKES</text>
+  <text x="491" y="584" fill="#8f876f" font-size="9" font-family="Inter,Arial,sans-serif" text-anchor="middle">AI adapted, held edge</text>
+</g>
+
+<!-- Gold ATH Breakout — 2024 -->
+<g>
+  <line x1="766" y1="252" x2="766" y2="556" stroke="rgba(212,175,55,.3)" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="696" y="556" width="140" height="36" rx="8" fill="rgba(212,175,55,.08)" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+  <text x="766" y="570" fill="#d4af37" font-size="10" font-family="Inter,Arial,sans-serif" text-anchor="middle" font-weight="700">GOLD ATH $2,400+</text>
+  <text x="766" y="584" fill="#8f876f" font-size="9" font-family="Inter,Arial,sans-serif" text-anchor="middle">Full rally captured</text>
+</g>
+
+<!-- $3,000 Breakout — 2025 -->
+<g>
+  <line x1="960" y1="148" x2="960" y2="556" stroke="rgba(212,175,55,.3)" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="890" y="556" width="140" height="36" rx="8" fill="rgba(212,175,55,.08)" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+  <text x="960" y="570" fill="#d4af37" font-size="10" font-family="Inter,Arial,sans-serif" text-anchor="middle" font-weight="700">GOLD $3,000+</text>
+  <text x="960" y="584" fill="#8f876f" font-size="9" font-family="Inter,Arial,sans-serif" text-anchor="middle">AI scaled into rally</text>
+</g>
+
+<!-- ============================================= -->
+<!-- STATS OVERLAY (top-right) -->
+<!-- ============================================= -->
+<g>
+  <rect x="940" y="58" width="210" height="148" rx="14" fill="rgba(10,10,10,.88)" stroke="rgba(212,175,55,.18)" stroke-width="1"/>
+  <text x="958" y="82" fill="#8f876f" font-size="10" font-family="Inter,Arial,sans-serif" font-weight="600" letter-spacing=".08em">SIMULATED CAGR</text>
+  <text x="958" y="106" fill="#f2d57a" font-size="24" font-family="Inter,Arial,sans-serif" font-weight="800">+38.4%</text>
+  <line x1="958" y1="118" x2="1130" y2="118" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="958" y="136" fill="#8f876f" font-size="10" font-family="Inter,Arial,sans-serif" font-weight="600" letter-spacing=".08em">WIN RATE</text>
+  <text x="958" y="158" fill="#f2d57a" font-size="22" font-family="Inter,Arial,sans-serif" font-weight="800">78.56%</text>
+  <text x="1035" y="158" fill="#8f876f" font-size="11" font-family="Inter,Arial,sans-serif"> (3,412 trades)</text>
+  <line x1="958" y1="168" x2="1130" y2="168" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+  <text x="958" y="184" fill="#8f876f" font-size="10" font-family="Inter,Arial,sans-serif" font-weight="600" letter-spacing=".08em">EXPECTANCY</text>
+  <text x="958" y="200" fill="#f2d57a" font-size="18" font-family="Inter,Arial,sans-serif" font-weight="800">376.5 pips</text>
+</g>
+
+<!-- SIMULATED tag watermark -->
+<g opacity=".06">
+  <text x="600" y="300" fill="#d4af37" font-family="Inter,Arial,sans-serif" font-size="72" font-weight="900" text-anchor="middle" letter-spacing=".15em">SIMULATED</text>
+</g>
+
+</svg>
+
+<!-- Bottom metrics row -->
+<div class="ai-metrics-row" style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px;">
+  <div style="padding:14px;border-radius:14px;background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.12);">
+    <div style="color:#8f876f;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Total Sim. Return</div>
+    <div style="color:#f2d57a;font-size:24px;font-weight:800;margin-top:4px;">+841.2%</div>
+    <div style="color:#887a68;font-size:11px;margin-top:2px;">vs Gold +92.7%</div>
+  </div>
+  <div style="padding:14px;border-radius:14px;background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.12);">
+    <div style="color:#8f876f;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Sim. CAGR</div>
+    <div style="color:#f2d57a;font-size:24px;font-weight:800;margin-top:4px;">+38.4%</div>
+    <div style="color:#887a68;font-size:11px;margin-top:2px;">Annualized return</div>
+  </div>
+  <div style="padding:14px;border-radius:14px;background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.12);">
+    <div style="color:#8f876f;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Profit Factor</div>
+    <div style="color:#f2d57a;font-size:24px;font-weight:800;margin-top:4px;">2.31</div>
+    <div style="color:#887a68;font-size:11px;margin-top:2px;">Shows how much gross profit the system generates for every $1 of gross loss.</div>
+  </div>
+  <div style="padding:14px;border-radius:14px;background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.12);">
+    <div style="color:#8f876f;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Max Drawdown</div>
+    <div style="color:#f2d57a;font-size:24px;font-weight:800;margin-top:4px;">-28.4%</div>
+    <div style="color:#887a68;font-size:11px;margin-top:2px;">COVID Mar 2020</div>
+  </div>
+  <div style="padding:14px;border-radius:14px;background:rgba(212,175,55,.05);border:1px solid rgba(212,175,55,.12);">
+    <div style="color:#8f876f;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Simulated Trades</div>
+    <div style="color:#f2d57a;font-size:24px;font-weight:800;margin-top:4px;">3,412</div>
+    <div style="color:#887a68;font-size:11px;margin-top:2px;">Jan 2019 – May 2026</div>
+  </div>
+</div>
+
+</div>
+
+<p style="margin-top:18px;color:#8f876f;font-size:16px;max-width:780px;margin-left:auto;margin-right:auto;line-height:1.7;">
+The simulation applies the <strong style="color:#d4af37;">same AI model logic</strong> powering the live account — macro regime detection, momentum scoring, dynamic position sizing, and risk controls — to seven years of historical XAUUSD data. Simulated outperformance versus passive gold: <strong style="color:#d4af37;">approximately 9×</strong>.
+</p>
+
+<!-- Simulated disclaimer inline -->
+<div style="margin:14px auto 0;max-width:780px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);">
+  <p style="color:#887a68;font-size:12px;line-height:1.7;margin:0;text-align:left;">
+    <strong style="color:#8f876f;">Simulated Performance Disclosure:</strong> The chart above represents hypothetical, backtested results. Simulated performance is not indicative of future results. The model was applied retroactively to historical data and does not account for real-world execution factors such as slippage, liquidity constraints, or market impact. Actual live trading results may differ materially. Past simulated or live performance does not guarantee future returns.
+  </p>
+</div>
+
+<div class="live-badges" style="margin-top:16px;">
+  <span class="live-badge">7‑Year Backtest</span>
+  <span class="live-badge">3,412 Simulated Trades</span>
+  <span class="live-badge">Macro Regime Detection</span>
+  <span class="live-badge">78.56% Win Rate</span>
+  <span class="live-badge">Sharpe 1.82</span>
+</div>
+
+
+</div>
+</section>
+<section style="padding:30px 0;background:#0a0a0a;">
+<div class="reveal" style="max-width:900px;margin:auto;text-align:center;padding:0 24px;">
+
+<h2 style="color:#d4af37;font-size:34px;margin-bottom:18px;">
+Strategy Capacity
+</h2>
+
+<p class="capacity-sub" style="color:var(--muted);margin:8px 0 12px;text-align:center;">
+ProGold AI operates with limited capacity to maintain execution efficiency.
+</p>
+
+<div style="display:flex;justify-content:flex-end;margin-bottom:4px;">
+  <span class="capacity-label">100% filled</span>
+</div>
+<div style="background:#1a1a1a;border-radius:20px;padding:10px;">
+<div style="
+width:100%;
+background:linear-gradient(90deg,#d4af37 0%,#f2d57a 25%,#fffbe6 50%,#f2d57a 75%,#d4af37 100%);
+background-size:200% 100%;
+animation:goldShimmer 3s ease-in-out infinite;
+height:26px;
+border-radius:16px;
+box-shadow:0 0 14px rgba(212,175,55,.35), 0 0 4px rgba(212,175,55,.2);
+"></div>
+</div>
+
+<div style="display:flex;justify-content:space-between;color:var(--muted);margin-top:6px;">
+<span>$0</span>
+<span>$2,000,000 max capacity</span>
+</div>
+
+<p style="margin-top:4px;color:#d4af37;font-weight:600;">
+$2,000,000 currently allocated across 72 active accounts.
+</p>
+
+<p style="margin-top:4px;color:#d4af37;font-weight:600;">
+Minimum investment: $20,000 USD.
+</p>
+
+</div>
+</section>
+  </main>
+
+
+
+<footer style="margin-top:24px;padding:24px 20px 32px;text-align:center;border-top:1px solid rgba(212,175,55,.2);background:linear-gradient(180deg,#060606,#040404);color:#bdb6a6;font-size:15px;line-height:1.7;">
+  <div style="max-width:980px;margin:auto;">
+    <img src="/assets/pg3ai-logo.jpg" alt="PG3 AI logo" width="72" height="72" loading="lazy" decoding="async" style="width:72px;height:72px;border-radius:50%;background:#000;box-shadow:0 0 0 1px rgba(212,175,55,.3), 0 8px 28px rgba(212,175,55,.15);margin:0 auto 18px;display:block;"/>
+    <div style="display:flex;justify-content:center;gap:24px;margin-bottom:20px;flex-wrap:wrap;">
+      <a href="#performance" class="footer-link">Performance</a>
+      <a href="#strategy" class="footer-link">Strategy</a>
+      <a href="#risk" class="footer-link">Risk</a>
+      <a href="#invest" class="footer-link">Invest</a>
+    </div>
+    <span style="color:#d4af37;font-weight:700;letter-spacing:.03em;">Copy Trading Risk Disclaimer</span><br><br>
+    Copy trading involves substantial risk and is not suitable for every investor. Past performance does not guarantee future results. The value of investments can rise or fall, and you may lose part or all of your capital. Strategy returns, drawdowns, and account statistics shown on this page are for informational purposes only and should not be treated as financial advice or a promise of future performance. Before allocating capital, you should assess your financial situation, risk tolerance, and investment objectives carefully.
+    <div style="margin-top:18px;color:#bdb6a6;font-size:13px;">
+      Have a question or need assistance? Reach out to us at <a href="mailto:contact@rievepgs.com" style="color:#d4af37;font-weight:600;text-decoration:none;transition:color .2s ease;" onmouseover="this.style.color='#f2d57a'" onmouseout="this.style.color='#d4af37'">contact@rievepgs.com</a>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);color:#887a68;font-size:12px;">
+      &copy; 2026 PG3 AI. All rights reserved.
+      <span style="margin:0 8px;">|</span>
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" style="color:#d4af37;font-size:12px;">Back to Top &uarr;</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function(){
+  /* ── Mobile menu toggle ── */
+  var btn=document.getElementById('menuToggle');
+  var nav=document.getElementById('navLinks');
+  if(btn&&nav){
+    function closeMenu(){
+      nav.classList.remove('open');
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded','false');
+    }
+    btn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      btn.classList.toggle('active');
+      btn.setAttribute('aria-expanded',open);
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',closeMenu);
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&nav.classList.contains('open')) closeMenu();
+    });
+    document.addEventListener('click',function(e){
+      if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target)) closeMenu();
+    });
+  }
+
+  /* ── Scroll progress bar ── */
+  var progressBar=document.querySelector('.scroll-progress');
+  if(progressBar){
+    window.addEventListener('scroll',function(){
+      var h=document.documentElement;
+      var scrollTop=h.scrollTop||document.body.scrollTop;
+      var scrollHeight=h.scrollHeight-h.clientHeight;
+      if(scrollHeight>0) progressBar.style.transform='scaleX('+scrollTop/scrollHeight+')';
+    },{passive:true});
+  }
+
+  /* ── Scroll reveal (IntersectionObserver) ── */
+  var reveals=document.querySelectorAll('.reveal');
+  if(reveals.length&&'IntersectionObserver' in window){
+    var revealObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('revealed');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+    reveals.forEach(function(el){revealObs.observe(el)});
+  }
+
+  /* ── Back to top button ── */
+  var backBtn=document.querySelector('.back-to-top');
+  if(backBtn){
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>600) backBtn.classList.add('visible');
+      else backBtn.classList.remove('visible');
+    },{passive:true});
+    backBtn.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+
+  /* ── Counter animation for stat values ── */
+  function animateCounters(){
+    document.querySelectorAll('.stat .value').forEach(function(el){
+      if(el.dataset.counted) return;
+      var text=el.textContent.trim();
+      var match=text.match(/^([+-]?)(\d+(?:\.\d+)?)(%)?\s*$/);
+      if(!match) return;
+      el.dataset.counted='1';
+      var sign=match[1],target=parseFloat(match[2]),suffix=match[3]||'';
+      var decimals=match[2].indexOf('.')!==-1?match[2].split('.')[1].length:0;
+      var duration=1400,startTime=null;
+      function step(ts){
+        if(!startTime) startTime=ts;
+        var p=Math.min((ts-startTime)/duration,1);
+        var eased=p===1?1:1-Math.pow(2,-10*p);
+        el.textContent=sign+(target*eased).toFixed(decimals)+suffix;
+        if(p<1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var statsSection=document.getElementById('performance');
+  if(statsSection&&'IntersectionObserver' in window){
+    var counterObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){animateCounters();counterObs.unobserve(entry.target)}
+      });
+    },{threshold:0.15});
+    counterObs.observe(statsSection);
+  }
+
+  /* ── Equity curve draw-on-scroll ── */
+  var curveLine=document.querySelector('.curve-animate');
+  if(curveLine&&'IntersectionObserver' in window){
+    var curveObs=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          curveLine.classList.add('play');
+          curveObs.unobserve(entry.target);
+          /* iOS Safari fallback: force-show the line after the animation
+             duration in case stroke-dashoffset animation fails to run */
+          setTimeout(function(){
+            curveLine.classList.add('force-visible');
+          }, 3700);
+        }
+      });
+    },{threshold:0.2});
+    curveObs.observe(curveLine);
+    /* Safety net: if IntersectionObserver never fires (iOS edge case),
+       ensure the line is visible after a reasonable wait */
+    setTimeout(function(){
+      if(!curveLine.classList.contains('play')){
+        curveLine.classList.add('play');
+        setTimeout(function(){ curveLine.classList.add('force-visible'); }, 3700);
+      }
+    }, 4000);
+  } else if(curveLine){
+    /* No IntersectionObserver: show immediately */
+    curveLine.style.strokeDashoffset='0';
+  }
+
+  /* ── Active nav link highlight on scroll ── */
+  var sections=document.querySelectorAll('section[id]');
+  var navLinks=document.querySelectorAll('.nav-links a');
+  if(sections.length&&navLinks.length){
+    window.addEventListener('scroll',function(){
+      var scrollPos=window.scrollY+120;
+      sections.forEach(function(sec){
+        if(sec.offsetTop<=scrollPos&&sec.offsetTop+sec.offsetHeight>scrollPos){
+          navLinks.forEach(function(l){
+            l.style.color=l.getAttribute('href')==='#'+sec.id?'#f2d57a':'';
+          });
+        }
+      });
+    },{passive:true});
+  }
+})();
+</script>
+
+
+</body>
+</html>
