@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ProGold AI — a systematic, AI-powered gold trading strategy built on disciplined risk management and full performance transparency. Copy trade XAUUSD with institutional execution through AxiTrader." />
+  <meta name="description" content="ProGold AI — a systematic, AI-powered gold trading strategy built on disciplined risk management and full performance transparency. Copy trade XAUUSD with institutional execution through FP Markets and AxiTrader." />
   <meta name="theme-color" content="#080808" />
   <meta property="og:title" content="PG3 AI | ProGold AI" />
-  <meta property="og:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management, executed through AxiTrader." />
+  <meta property="og:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management, executed through FP Markets and AxiTrader." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="PG3 AI | ProGold AI" />
-  <meta name="twitter:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management." />
+  <meta name="twitter:description" content="Institutional-grade AI gold trading strategy with 313.79% live return. Full transparency, disciplined risk management, executed through FP Markets and AxiTrader." />
   <meta name="robots" content="index, follow" />
   <meta property="og:url" content="https://pg3ai.netlify.app/" />
   <meta property="og:image" content="https://pg3ai.netlify.app/assets/pg3ai-logo.jpg" />
@@ -51,6 +51,7 @@
     .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
     .nav{
       position:sticky;top:0;z-index:10;
+      -webkit-backdrop-filter: blur(14px);
       backdrop-filter: blur(14px);
       background:rgba(5,5,5,.72);
       border-bottom:1px solid rgba(255,255,255,.05);
@@ -81,6 +82,7 @@
       padding:11px;
       box-sizing:border-box;
       image-rendering:-webkit-optimize-contrast;
+      image-rendering:crisp-edges;
     }
     .nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px}
     .nav-links a{transition:color .2s ease;position:relative}
@@ -248,7 +250,7 @@
     @media (max-width: 680px){
       .nav-links{
         flex-direction:column;position:absolute;top:88px;left:0;right:0;
-        background:rgba(8,8,8,.96);backdrop-filter:blur(14px);
+        background:rgba(8,8,8,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
         padding:18px 24px;gap:16px;
         border-bottom:1px solid rgba(212,175,55,.15);z-index:20;
         opacity:0;visibility:hidden;transform:translateY(-8px);
@@ -285,10 +287,6 @@
 </style>
 
 <style id="rieve-upgrade">
-@keyframes goldTicker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 @keyframes floatGlow {
   0% { transform: translateY(0px) translateX(0px); opacity:.18; }
   50% { transform: translateY(-10px) translateX(6px); opacity:.28; }
@@ -345,31 +343,6 @@
   transform-origin:center;
 }
 body > * { position:relative; z-index:1; }
-.ticker-wrap{
-  overflow:hidden;
-  border-top:1px solid rgba(212,175,55,.16);
-  border-bottom:1px solid rgba(212,175,55,.16);
-  background:linear-gradient(180deg, rgba(16,16,16,.95), rgba(8,8,8,.95));
-}
-.ticker-track{
-  display:flex;
-  width:max-content;
-  animation:goldTicker 26s linear infinite;
-}
-.ticker-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:14px 28px;
-  color:#e9d9a1;
-  font-weight:700;
-  letter-spacing:.03em;
-  white-space:nowrap;
-}
-.ticker-dot{
-  width:8px;height:8px;border-radius:999px;background:#d4af37;
-  box-shadow:0 0 14px rgba(212,175,55,.6);
-}
 .curve-animate{
   stroke-dasharray:1400;
   stroke-dashoffset:1400;
@@ -403,62 +376,6 @@ body > * { position:relative; z-index:1; }
   font-size:13px;
   letter-spacing:.06em;
   text-transform:uppercase;
-}
-</style>
-
-
-<style id="rieve-ai-upgrade-style">
-.ai-chip-section{
-  padding:34px 0;
-  background:linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,.35) 100%);
-}
-.ai-chip-title{
-  text-align:center;
-  margin:0 0 24px;
-  color:var(--gold, #d4af37);
-  font-size:38px;
-  letter-spacing:.02em;
-}
-.ai-chip-frame{
-  position:relative;
-  max-width:1100px;
-  margin:0 auto;
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid rgba(212,175,55,.22);
-  box-shadow:0 24px 80px rgba(0,0,0,.48);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(212,175,55,.24), transparent 35%),
-    linear-gradient(135deg, #15110a 0%, #0a0a0a 55%, #070707 100%);
-}
-.ai-chip-frame::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(212,175,55,.12), rgba(0,0,0,0) 28%);
-  pointer-events:none;
-}
-.ai-chip-image{
-  width:100%;
-  display:block;
-  filter: grayscale(1) sepia(1) hue-rotate(350deg) saturate(3.8) brightness(.88) contrast(1.12);
-  opacity:.95;
-}
-.ai-chip-overlay{
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at center, rgba(212,175,55,.22), transparent 30%),
-    linear-gradient(135deg, rgba(212,175,55,.32), rgba(0,0,0,0) 38%, rgba(0,0,0,.08) 100%);
-  pointer-events:none;
-}
-.ai-chip-copy{
-  max-width:900px;
-  margin:26px auto 0;
-  text-align:center;
-  color:var(--muted, #bdb6a6);
-  font-size:18px;
-  line-height:1.7;
 }
 </style>
 
@@ -542,15 +459,13 @@ section:has(h2){scroll-margin-top:72px;}
   svg [filter="url(#glow)"]{opacity:0.09 !important}
   svg [filter="url(#simGlow)"]{opacity:0.35 !important}
   svg [filter="url(#simSoftGlow)"]{opacity:0.38 !important}
-  .ticker-dot{box-shadow:0 0 3px rgba(212,175,55,.2) !important}
-  .nav .cta{animation:none !important}
+  .hero .actions .cta{animation:none !important}
 }
 @media (hover: none) and (pointer: coarse){
   svg [filter="url(#glow)"]{opacity:0.09 !important}
   svg [filter="url(#simGlow)"]{opacity:0.35 !important}
   svg [filter="url(#simSoftGlow)"]{opacity:0.38 !important}
-  .ticker-dot{box-shadow:0 0 3px rgba(212,175,55,.2) !important}
-  .nav .cta{animation:none !important}
+  .hero .actions .cta{animation:none !important}
 }
 </style>
 
@@ -673,7 +588,7 @@ section:has(h2){scroll-margin-top:72px;}
   0%,100%{box-shadow:0 10px 30px rgba(212,175,55,.18)}
   50%{box-shadow:0 10px 30px rgba(212,175,55,.38)}
 }
-.nav .cta{animation:ctaPulse 3s ease-in-out 2s 2}
+.hero .actions .cta{animation:ctaPulse 3s ease-in-out 2s 2}
 
 /* ── Capacity bar smoothing ── */
 .capacity-label{
@@ -828,13 +743,15 @@ section:has(h2){scroll-margin-top:72px;}
 
   <g fill="#d2b257" font-family="Inter, Arial, Helvetica, sans-serif">
     <text x="92" y="34" font-size="24" font-weight="700">PG3 AI Equity Curve</text>
-    <text x="92" y="580" font-size="18">02 Feb</text>
-    <text x="255" y="580" font-size="18">10 Mar</text>
-    <text x="418" y="580" font-size="18">17 Mar</text>
-    <text x="581" y="580" font-size="18">24 Mar</text>
-    <text x="744" y="580" font-size="18">31 Mar</text>
-    <text x="907" y="580" font-size="18">07 Apr</text>
-    <text x="1050" y="580" font-size="18">04 May</text>
+    <g text-anchor="middle">
+      <text x="90" y="580" font-size="18">02 Feb</text>
+      <text x="263" y="580" font-size="18">17 Feb</text>
+      <text x="437" y="580" font-size="18">04 Mar</text>
+      <text x="610" y="580" font-size="18">19 Mar</text>
+      <text x="783" y="580" font-size="18">03 Apr</text>
+      <text x="957" y="580" font-size="18">18 Apr</text>
+      <text x="1130" y="580" font-size="18">04 May</text>
+    </g>
 
     <text x="30" y="535" font-size="18">0</text>
     <text x="14" y="397" font-size="18">100</text>
