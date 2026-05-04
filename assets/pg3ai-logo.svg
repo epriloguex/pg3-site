@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="PG3 AI logo">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1a1814"/>
+      <stop offset="60%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff4cb"/>
+      <stop offset="40%" stop-color="#f2d57a"/>
+      <stop offset="100%" stop-color="#c69413"/>
+    </linearGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2d57a"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#9c7c1c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="116" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="113" fill="none" stroke="url(#goldRing)" stroke-width="3"/>
+  <circle cx="120" cy="120" r="103" fill="none" stroke="#d4af37" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="120" y="138" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="74" font-weight="700" fill="url(#goldText)" letter-spacing="-2">PG3</text>
+  <text x="120" y="172" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#d4af37" letter-spacing="6">AI</text>
+</svg>
