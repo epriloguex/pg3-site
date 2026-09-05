@@ -7,6 +7,10 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     X-XSS-Protection = "1; mode=block"
 
+# Assets are cached for a year and marked immutable, so browsers never
+# revalidate them. Any change to a file under /assets MUST ship under a new
+# filename (e.g. pg3ai-logo-v2.jpg -> pg3ai-logo-v3.jpg); overwriting a file
+# in place leaves returning visitors pinned to the old copy.
 [[headers]]
   for = "/assets/*"
   [headers.values]
