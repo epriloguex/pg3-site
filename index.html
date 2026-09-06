@@ -612,6 +612,23 @@ section:has(h2){scroll-margin-top:96px;}
   color:var(--gold);font-size:13px;font-weight:700;
   margin-bottom:8px;
 }
+.capacity-figure{
+  display:inline-flex;align-items:baseline;gap:10px;
+  margin-top:18px;padding:10px 20px;border-radius:999px;
+  border:1px solid rgba(212,175,55,.22);
+  background:rgba(212,175,55,.06);
+}
+.capacity-figure b{
+  color:var(--gold);font-size:26px;font-weight:800;
+  letter-spacing:.02em;line-height:1;
+}
+.capacity-figure span{
+  color:#bdb6a6;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+}
+@media(max-width:520px){
+  .capacity-figure{flex-direction:column;align-items:center;gap:4px;border-radius:18px;}
+  .capacity-figure span{text-align:center;}
+}
 </style>
 
 </head>
@@ -1534,8 +1551,18 @@ box-shadow:0 0 14px rgba(212,175,55,.35), 0 0 4px rgba(212,175,55,.2);
 "></div>
 </div>
 
-<p style="margin-top:16px;color:var(--muted);">
-The strategy is currently operating at full follower capacity. New copy-trading access is available by waitlist only.
+<!-- VERIFY: keep the connected-account count below in step with the current documented number of live follower accounts. -->
+<div class="capacity-figure">
+  <b>127</b>
+  <span>Accounts currently copy trading</span>
+</div>
+
+<p style="margin-top:18px;color:var(--muted);max-width:760px;margin-left:auto;margin-right:auto;line-height:1.7;">
+That allocation is now fully subscribed. <strong style="color:#d4af37;">127 follower accounts</strong> are currently connected to the ProGold strategy and copy trading alongside the live account, bringing the strategy to its stated aggregate capacity.
+</p>
+
+<p style="margin-top:12px;color:var(--muted);max-width:760px;margin-left:auto;margin-right:auto;line-height:1.7;">
+To protect execution quality for the followers already connected, no further accounts are being onboarded at present. New copy-trading access is released by waitlist only, in the order requests are received.
 </p>
 
 </div>
