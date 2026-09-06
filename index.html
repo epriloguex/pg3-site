@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ProGold AI — a systematic, AI-powered gold trading strategy built on disciplined risk management and full performance transparency. Copy trade XAUUSD with institutional execution through HF Markets and AxiTrader." />
+  <meta name="description" content="PG3 AI ProGold — a systematic XAUUSD copy-trading strategy built on disciplined risk management, structured execution and transparent performance reporting. Copied trades are executed in the follower’s own supported brokerage account." />
   <meta name="theme-color" content="#080808" />
   <meta property="og:title" content="PG3 AI | ProGold AI" />
-  <meta property="og:description" content="Institutional-grade AI gold trading strategy with 594.84% live return. Full transparency, disciplined risk management, executed through HF Markets and AxiTrader." />
+  <meta property="og:description" content="A systematic XAUUSD copy-trading strategy. Live performance is reported in full — 594.84% cumulative return as of September 5, 2026, alongside a 29.67% maximum drawdown. Copy trading involves risk of loss." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="PG3 AI | ProGold AI" />
-  <meta name="twitter:description" content="Institutional-grade AI gold trading strategy with 594.84% live return. Full transparency, disciplined risk management, executed through HF Markets and AxiTrader." />
+  <meta name="twitter:description" content="A systematic XAUUSD copy-trading strategy. Live performance is reported in full — 594.84% cumulative return as of September 5, 2026, alongside a 29.67% maximum drawdown. Copy trading involves risk of loss." />
   <meta name="robots" content="index, follow" />
   <meta property="og:url" content="https://pg3ai.com/" />
   <meta property="og:image" content="https://pg3ai.com/assets/pg3ai-logo-v2.jpg" />
@@ -174,6 +174,17 @@
     }
     .ghost:hover,.ghost:focus-visible{border-color:var(--gold);background:rgba(212,175,55,.06);transform:translateY(-2px)}
     .ghost:active{transform:translateY(0)}
+    .cta-outline{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:44px;padding:12px 20px;border-radius:999px;
+      border:1px solid rgba(212,175,55,.42);
+      background:rgba(212,175,55,.05);
+      color:var(--gold-2);font-weight:700;font-size:14px;letter-spacing:.01em;
+      transition:border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .cta-outline:hover,.cta-outline:focus-visible{border-color:var(--gold);background:rgba(212,175,55,.1);transform:translateY(-1px)}
+    .cta-outline:active{transform:translateY(0)}
+    .cta-outline svg{flex:0 0 auto}
     .panel{
       border:1px solid rgba(255,255,255,.06);
       background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
@@ -421,7 +432,7 @@ p{margin-top:6px !important;margin-bottom:10px !important;}
 .live-badges{margin-top:10px !important;margin-bottom:8px !important;}
 .capacity-sub{max-width:760px;margin-left:auto !important;margin-right:auto !important;}
 /* tighten the strategy capacity section */
-section:has(h2){scroll-margin-top:72px;}
+section:has(h2){scroll-margin-top:96px;}
 /* mobile specific */
 @media (max-width: 900px){
   section{padding-top:26px !important;padding-bottom:26px !important;}
@@ -576,6 +587,7 @@ section:has(h2){scroll-margin-top:72px;}
 
 /* ── Very small screens ── */
 @media(max-width:400px){
+  .cta-outline{font-size:13px;padding:12px 16px;text-align:center;line-height:1.4}
   .stat-grid{grid-template-columns:1fr !important}
   h1{font-size:34px !important}
   .banner h3{font-size:22px !important}
@@ -662,7 +674,7 @@ section:has(h2){scroll-margin-top:72px;}
         <a href="#performance">Performance</a>
         <a href="#strategy">Strategy</a>
         <a href="#risk">Risk</a>
-        <a href="#invest">Invest</a>
+        <a href="#copy">Copy</a>
       </div>
       <button class="hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -677,14 +689,10 @@ section:has(h2){scroll-margin-top:72px;}
       <div>
         <img class="hero-logo" src="/assets/pg3ai-logo-v2.jpg" alt="PG3 AI — Built For Serious Traders" width="360" height="360" loading="eager" decoding="async" fetchpriority="high"/>
         <div class="eyebrow">PREMIUM GOLD SYSTEM</div>
-        <h1><span class="gradient">Institutional Gold<br>Performance.</span> Built for Serious Traders.</h1>
+        <h1><span class="gradient">Systematic Gold<br>Performance.</span> Built for Serious Traders.</h1>
         <p>
-          PG3 AI is a systematic gold trading strategy built on disciplined risk management and full performance transparency. Every position is executed with precision, and every result is openly reported — giving investors the clarity and confidence they deserve.
+          PG3 AI ProGold is a systematic XAUUSD copy-trading strategy built around disciplined risk management, structured execution and transparent performance reporting. Live results — including both gains and drawdowns — are presented openly so traders can evaluate the strategy with appropriate context.
         </p>
-        <div class="actions">
-          <a class="cta" href="#invest">Join Waitlist</a>
-          <a class="ghost" href="#performance">View Metrics</a>
-        </div>
       </div>
     </div>
   </section>
@@ -698,7 +706,7 @@ section:has(h2){scroll-margin-top:72px;}
       <span style="width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,.6);display:inline-block;">
         <span style="display:block;width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulseNode 2s ease-in-out infinite;"></span>
       </span>
-      <span style="color:#4ade80;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">LIVE TRADING — REAL RETURNS</span>
+      <span style="color:#4ade80;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">LIVE TRADING — REAL RESULTS</span>
     </div>
     <h2 style="color:#f5f2e8;font-size:28px;margin:0;letter-spacing:-.01em;">PG3 AI Equity Curve</h2>
     <p style="color:#8f876f;font-size:14px;margin:4px 0 0;">Live account performance — as of September 5, 2026</p>
@@ -858,6 +866,14 @@ section:has(h2){scroll-margin-top:72px;}
   <rect x="1.5" y="1.5" width="1197" height="617" rx="28" fill="none" stroke="#6b5522" stroke-width="3" opacity="0.85"/>
 </svg>
 </div>
+<!-- External live track record — single prominent Myfxbook link for this page -->
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;margin:0 0 24px;text-align:center;">
+  <a class="cta-outline" href="https://www.myfxbook.com/members/Rieveko/pg3-ai/12146505" target="_blank" rel="noopener noreferrer" aria-label="View the PG3 AI live track record on Myfxbook — opens in a new tab">
+    View Live Track Record on Myfxbook
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+  </a>
+  <span style="color:var(--soft);font-size:12px;line-height:1.5;">External live performance record on Myfxbook</span>
+</div>
 <div class="stat-grid reveal reveal-stagger">
       <div class="stat">
         <div class="label">Total Return</div>
@@ -897,9 +913,10 @@ section:has(h2){scroll-margin-top:72px;}
     <div class="panel reveal">
       <h2>Strategy Overview</h2>
       <p>
-        ProGold AI is a hybrid human-AI model built exclusively for XAUUSD — pairing experienced trader insight with algorithmic intelligence to capture gold's most asymmetric opportunities.
+        ProGold AI is a hybrid human-AI gold trading strategy developed specifically for XAUUSD, combining experienced trader judgement with systematic market analysis and rule-based risk controls. Followers copy the strategy's trades into their own supported brokerage accounts.
       </p>
       <div class="list">
+        <!-- VERIFY: confirm the data feeds described below (central bank signals, inflation data, USD correlations) are actually ingested by the model before publishing. -->
         <div class="item">
           <div class="dot">01</div>
           <div>
@@ -917,18 +934,74 @@ section:has(h2){scroll-margin-top:72px;}
         <div class="item">
           <div class="dot">03</div>
           <div>
-            <strong>Institutional Execution Standards</strong><br>
-            <span style="color:var(--muted)">Low-latency, slippage-aware order routing. No high-spread entries, no thin-liquidity windows. Every trade is logged and auditable.</span>
+            <strong>Execution &amp; Risk Discipline</strong><br>
+            <!-- VERIFY: confirm a defined stop-loss is placed on every position and that spread/liquidity entry filters are implemented as described. -->
+            <span style="color:var(--muted)">Rule-based entries and exits with a defined stop-loss on every position. Entry filters are intended to avoid wide-spread and thin-liquidity conditions, and every copied trade is logged and reviewable.</span>
           </div>
         </div>
         <div class="item">
           <div class="dot">04</div>
           <div>
-            <strong>Continuous Model Evolution</strong><br>
-            <span style="color:var(--muted)">Walk-forward optimization with regime detection across risk-on, risk-off, and range-bound environments — preventing curve-fitting to outdated conditions.</span>
+            <strong>Continuous Model Evaluation</strong><br>
+            <!-- VERIFY: confirm walk-forward evaluation and regime detection are part of the live process. -->
+            <span style="color:var(--muted)">Walk-forward evaluation with regime detection across risk-on, risk-off and range-bound conditions, to reduce the risk of fitting the model to outdated market behaviour.</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" aria-hidden="true">
+  <section class="section wrap" id="about">
+    <div class="panel reveal">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.18);margin-bottom:14px;">
+        <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">About PG3 AI</span>
+      </div>
+      <h2>One Market. Studied Relentlessly.</h2>
+      <p>
+        PG3 AI Pte. Ltd. is a Singapore-registered trading technology company focused specifically on gold. Our research and strategy development concentrate on XAUUSD — including market structure, momentum, volatility and changing macroeconomic conditions.
+      </p>
+      <p>
+        The ProGold AI System applies this research within a structured copy-trading strategy. Live results are presented alongside drawdowns and other risk statistics so prospective followers can evaluate both performance and risk.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:24px;">
+        <!-- Pillar 01 -->
+        <div style="padding:22px 20px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="#d4af37"/></svg>
+          </div>
+          <div style="color:var(--text);font-size:16px;font-weight:700;">Single-Market Focus</div>
+          <div style="color:var(--muted);font-size:14px;margin-top:8px;line-height:1.6;">Our research, models and risk framework are built around XAUUSD, not retrofitted from unrelated asset classes.</div>
+        </div>
+        <!-- Pillar 02 -->
+        <div style="padding:22px 20px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+          </div>
+          <div style="color:var(--text);font-size:16px;font-weight:700;">Evidence Over Assertion</div>
+          <div style="color:var(--muted);font-size:14px;margin-top:8px;line-height:1.6;">Live returns and drawdowns are published together, with simulated historical testing shown for additional context.</div>
+        </div>
+        <!-- Pillar 03 -->
+        <div style="padding:22px 20px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div style="color:var(--text);font-size:16px;font-weight:700;">Your Brokerage Account</div>
+          <div style="color:var(--muted);font-size:14px;margin-top:8px;line-height:1.6;">Copy trading takes place in the follower&rsquo;s own supported brokerage account. PG3 AI does not receive customer deposits or hold client money.</div>
+        </div>
+        <!-- Pillar 04 -->
+        <div style="padding:22px 20px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(212,175,55,.08);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M5 12H2"/><path d="M22 12h-3"/><path d="M6.3 6.3 4.2 4.2"/><path d="M19.8 19.8l-2.1-2.1"/><path d="M6.3 17.7 4.2 19.8"/><path d="M19.8 4.2l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </div>
+          <div style="color:var(--text);font-size:16px;font-weight:700;">Transparent Strategy Standards</div>
+          <div style="color:var(--muted);font-size:14px;margin-top:8px;line-height:1.6;">Disciplined risk controls, structured execution, performance transparency and ongoing strategy evaluation.</div>
+        </div>
+      </div>
+      <!-- VERIFY: publish the "does not receive customer deposits or hold client money" statements above and below only if that is factually correct for the actual commercial arrangement. -->
+      <p style="color:var(--soft);font-size:12px;margin-top:22px;margin-bottom:0;line-height:1.6;">
+        Copy trading involves substantial risk and may result in losses. PG3 AI does not hold client deposits. Past performance and simulated results do not guarantee future performance.
+      </p>
     </div>
   </section>
 
@@ -937,16 +1010,17 @@ section:has(h2){scroll-margin-top:72px;}
     <div class="panel reveal">
       <h2>Risk Framing</h2>
       <p>
-        A 29.67% maximum drawdown is not incidental — it is a structural characteristic of a strategy designed to capture outsized returns in one of the world's most volatile asset classes. We publish it because serious allocators demand transparency.
+        A 29.67% maximum drawdown is a material risk characteristic of the live strategy and should be considered alongside its historical returns. We publish drawdown information because performance should be evaluated on both return and risk, not returns alone. Serious traders require transparency, including when performance is unfavourable.
       </p>
       <p>
-        Multi-layered risk controls are embedded in the architecture: hard stop-losses on every position, daily drawdown limits, correlation-based exposure caps, and automatic de-leveraging when volatility exceeds predefined thresholds.
+        <!-- VERIFY: confirm each control listed below is actually implemented in the live strategy (stop-losses, daily drawdown limits, exposure caps, automatic de-leveraging). Remove any that are not. -->
+        Risk controls are built into the strategy's rules: a stop-loss on every position, daily drawdown limits, exposure caps and reduced position sizing when volatility exceeds predefined thresholds.
       </p>
       <p>
-        Drawdown periods are an expected part of the return profile, not an anomaly. The 60.89% win rate demonstrates consistent trade selection — but past performance does not guarantee future results.
+        Drawdown periods are an expected part of the return profile, not an anomaly. The live track record currently reflects a 60.89% historical win rate; this statistic may vary materially over time and does not predict future results. Past performance does not guarantee future results.
       </p>
       <div class="quote">
-        "Any strategy that promises high returns without acknowledging the cost of those returns is selling a fantasy. We publish our drawdown alongside our profits because serious capital allocators demand nothing less."
+        "Strong historical returns should always be evaluated alongside the risks required to achieve them. We publish drawdowns alongside returns so prospective followers can assess both performance and risk."
       </div>
       <div class="mini-chart" aria-hidden="true">
         <svg viewBox="0 0 1000 300" preserveAspectRatio="none">
@@ -969,19 +1043,26 @@ section:has(h2){scroll-margin-top:72px;}
     </div>
   </section>
 
-  <!-- Broker Trust Section -->
+  <!-- Supported Broker & Execution Infrastructure -->
   <hr class="section-divider" aria-hidden="true">
   <section style="padding:48px 0 36px;">
     <div class="reveal" style="max-width:900px;margin:0 auto;padding:0 24px;text-align:center;">
       <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 18px;border-radius:999px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.15);margin-bottom:18px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">Tier-1 Regulated Broker</span>
+        <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">Broker &amp; Execution</span>
       </div>
       <h2 style="color:var(--text);font-size:clamp(24px,3.2vw,34px);font-weight:800;margin:0 0 10px;line-height:1.2;">
-        Executed Through <span style="color:#d4af37;">HF Markets / AxiTrader</span>
+        Supported Broker &amp; <span style="color:#d4af37;">Execution Infrastructure</span>
       </h2>
-      <p style="color:var(--muted);font-size:16px;line-height:1.7;max-width:640px;margin:0 auto 28px;">
-        All trades are executed through HF Markets and AxiTrader — globally recognized brokers with triple Tier-1 regulatory licensing across three major jurisdictions.
+      <p style="color:var(--muted);font-size:16px;line-height:1.7;max-width:640px;margin:0 auto 16px;">
+        ProGold copy trading operates through supported third-party brokerage infrastructure. Followers hold their brokerage relationship directly with the broker, and copied trades execute in their own individual account.
+      </p>
+      <p style="color:var(--text);font-size:15px;font-weight:600;margin:0 auto 8px;">
+        Currently supported brokers: HF Markets and AxiTrader.
+      </p>
+      <!-- VERIFY: confirm the supported broker list above, and confirm which legal entity within each broker group applies to each customer jurisdiction, before making entity-specific regulatory statements. Do not aggregate licences held by different group entities. -->
+      <p style="color:var(--soft);font-size:12px;line-height:1.6;max-width:640px;margin:0 auto 24px;">
+        Licences shown below are held by entities within these broker groups. The applicable regulator, account terms and client-money treatment depend on the entity a follower contracts with, and should be confirmed directly with that broker.
       </p>
       <div class="broker-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto;">
         <!-- ASIC License -->
@@ -991,7 +1072,7 @@ section:has(h2){scroll-margin-top:72px;}
           </div>
           <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">ASIC</div>
           <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">Australia</div>
-          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Australian Securities &amp; Investments Commission — one of the world's strictest financial regulators.</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Australian Securities &amp; Investments Commission — Australia&rsquo;s financial services regulator.</div>
         </div>
         <!-- CySEC License -->
         <div style="padding:22px 18px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
@@ -1000,7 +1081,7 @@ section:has(h2){scroll-margin-top:72px;}
           </div>
           <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">CySEC</div>
           <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">Cyprus (EU)</div>
-          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Cyprus Securities &amp; Exchange Commission — full EU regulatory framework with MiFID II compliance.</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Cyprus Securities &amp; Exchange Commission — the Cyprus regulator, within the EU MiFID II framework.</div>
         </div>
         <!-- FCA License -->
         <div style="padding:22px 18px;border-radius:var(--radius);background:var(--panel);border:1px solid rgba(212,175,55,.12);">
@@ -1009,26 +1090,16 @@ section:has(h2){scroll-margin-top:72px;}
           </div>
           <div style="color:#d4af37;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">FCA</div>
           <div style="color:var(--text);font-size:15px;font-weight:600;margin-top:4px;">United Kingdom</div>
-          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Financial Conduct Authority — one of the world's most respected financial regulators, ensuring the highest standards of conduct.</div>
+          <div style="color:var(--soft);font-size:12px;margin-top:6px;line-height:1.5;">Financial Conduct Authority — the UK&rsquo;s financial services regulator.</div>
         </div>
       </div>
-      <p style="color:var(--soft);font-size:12px;margin-top:20px;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto;">
-        Triple Tier-1 regulation means client funds are held in segregated accounts with strict capital adequacy requirements — providing an added layer of protection for your capital.
+      <p style="color:var(--soft);font-size:12px;margin-top:20px;line-height:1.6;max-width:640px;margin-left:auto;margin-right:auto;">
+        Broker regulation does not guarantee follower funds, execution quality or strategy performance, and does not remove trading or counterparty risk. Third-party broker regulatory status does not constitute regulatory approval or endorsement of PG3 AI.
       </p>
     </div>
   </section>
 
-  <section class="section wrap" id="invest">
-    <hr class="section-divider" aria-hidden="true" style="margin-bottom:28px">
-    <div class="banner reveal">
-      <div style="max-width:660px">
-        <h3>Join the Platform Access Waitlist</h3>
-        <p>New registrations for the ProGold AI System are currently at capacity. Join the waitlist to be notified when platform access becomes available or when the next registration window opens.</p>
-        <div class="fine">PG3 AI provides educational and analytical technology only. We do not hold, manage or allocate client funds. Past performance and simulated results do not guarantee future performance. Trading involves risk and may result in losses.</div>
-      </div>
-      <a class="cta" href="mailto:rieve@live.com?subject=PG3%20AI%20Platform%20Access%20Waitlist%20Request&amp;body=Hi%20PG3%20AI%20team%2C%0A%0AI%27d%20like%20to%20join%20the%20waitlist%20for%20platform%20access%20to%20the%20ProGold%20AI%20System.%0A%0AName%3A%0ALocation%3A%0A%0AThanks.">Join the Waitlist</a>
-    </div>
-  </section>
+
 
 
 
@@ -1041,7 +1112,7 @@ section:has(h2){scroll-margin-top:72px;}
     </div>
   </div>
   <p style="color:#887a68;font-size:13px;margin-top:8px;line-height:1.6;">
-    The live results above reflect real account performance; the simulated backtest below applies the same AI model logic to seven years of historical XAUUSD data for additional context.
+    The live performance reported earlier on this page reflects actual account results. The backtest below is simulated: the same model logic applied retrospectively to seven years of historical XAUUSD data, shown for context only.
   </p>
 </div>
 
@@ -1414,41 +1485,43 @@ overflow:hidden;
 
 </div>
 
+<!-- Simulated performance disclosure — kept adjacent to the simulated chart -->
+<div style="margin:18px auto 0;max-width:780px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);">
+  <p style="color:#887a68;font-size:12px;line-height:1.7;margin:0;text-align:left;">
+    <strong style="color:#8f876f;">Simulated Performance Disclosure:</strong> The results shown are hypothetical and backtested. Simulated performance is not actual trading performance and is not indicative of future results. Historical modelling may not fully reflect real-world execution factors including liquidity, slippage, spreads and market impact. Actual results may differ materially.
+  </p>
+</div>
+
 <p style="margin-top:18px;color:#8f876f;font-size:16px;max-width:780px;margin-left:auto;margin-right:auto;line-height:1.7;">
 The simulation applies the <strong style="color:#d4af37;">same AI model logic</strong> powering the live account — macro regime detection, momentum scoring, dynamic position sizing, and risk controls — to seven years of historical XAUUSD data. Simulated outperformance versus passive gold: <strong style="color:#d4af37;">approximately 9×</strong>.
 </p>
-
-<!-- Simulated disclaimer inline -->
-<div style="margin:14px auto 0;max-width:780px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);">
-  <p style="color:#887a68;font-size:12px;line-height:1.7;margin:0;text-align:left;">
-    <strong style="color:#8f876f;">Simulated Performance Disclosure:</strong> The chart above represents hypothetical, backtested results. Simulated performance is not indicative of future results. The model was applied retroactively to historical data and does not account for real-world execution factors such as slippage, liquidity constraints, or market impact. Actual live trading results may differ materially. Past simulated or live performance does not guarantee future returns.
-  </p>
-</div>
 
 <div class="live-badges" style="margin-top:16px;">
   <span class="live-badge">7‑Year Backtest</span>
   <span class="live-badge">3,412 Simulated Trades</span>
   <span class="live-badge">Macro Regime Detection</span>
-  <span class="live-badge">73.86% Win Rate</span>
-  <span class="live-badge">Sharpe 1.82</span>
+  <span class="live-badge">73.86% Simulated Win Rate</span>
+  <span class="live-badge">Simulated Sharpe 1.82</span>
 </div>
 
 
 </div>
 </section>
-<section style="padding:30px 0;background:#0a0a0a;">
+<!-- Copy Strategy Capacity -->
+<!-- VERIFY: retain the US$2,000,000 figure and the "100% capacity reached" state only while both are documented, current limits for the copy strategy. -->
+<section id="copy" style="padding:30px 0;background:#0a0a0a;">
 <div class="reveal" style="max-width:900px;margin:auto;text-align:center;padding:0 24px;">
 
 <h2 style="color:#d4af37;font-size:34px;margin-bottom:18px;">
-Strategy Capacity
+Copy Strategy Capacity
 </h2>
 
 <p class="capacity-sub" style="color:var(--muted);margin:8px 0 12px;text-align:center;">
-ProGold AI operates with limited capacity to maintain execution efficiency. The strategy is currently at full capacity; new followers are accepted via waitlist.
+ProGold operates with a defined aggregate follower capacity intended to preserve execution quality as copied order volume increases. Capacity refers to the aggregate account capital connected to the copy strategy. Client funds remain within each follower&rsquo;s own brokerage account and are not deposited with or held by PG3 AI.
 </p>
 
 <div style="display:flex;justify-content:flex-end;margin-bottom:4px;">
-  <span class="capacity-label">100% filled</span>
+  <span class="capacity-label">100% Capacity Reached</span>
 </div>
 <div style="background:#1a1a1a;border-radius:20px;padding:10px;">
 <div style="
@@ -1464,18 +1537,35 @@ box-shadow:0 0 14px rgba(212,175,55,.35), 0 0 4px rgba(212,175,55,.2);
 
 <div class="capacity-range" style="display:flex;justify-content:space-between;color:var(--muted);margin-top:6px;">
 <span>US$0</span>
-<span>US$2,000,000 max capacity</span>
+<span style="white-space:normal;text-align:right;padding-left:12px;"><span style="white-space:nowrap;">US$2,000,000</span> Maximum Strategy Capacity</span>
 </div>
 
-<p style="margin-top:4px;color:var(--muted);">
-Waitlist priority is given in the order requests are received.
+<p style="margin-top:10px;color:var(--muted);">
+New copy-trading access is currently available by waitlist only.
 </p>
 
-<div style="margin-top:18px;">
-  <a class="cta" href="mailto:rieve@live.com?subject=PG3%20AI%20Waitlist%20Request&amp;body=Hi%20PG3%20AI%20team%2C%0A%0AI%27d%20like%20to%20be%20added%20to%20the%20waitlist%20for%20your%20gold%20trading%20strategy.%0A%0AName%3A%0ALocation%3A%0AIndicative%20allocation%20size%3A%0A%0AThanks.">Join the Waitlist</a>
 </div>
+</section>
 
-</div>
+<!-- Copy-Trading Waitlist -->
+<hr class="section-divider" aria-hidden="true">
+<section class="section wrap" id="waitlist">
+  <div class="panel reveal" style="text-align:center;">
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.18);margin-bottom:14px;">
+      <span style="color:#d4af37;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">Waitlist</span>
+    </div>
+    <h2 style="margin-top:0;">Join the Copy-Trading Waitlist</h2>
+    <p style="color:var(--muted);max-width:640px;margin:0 auto 10px;line-height:1.7;">
+      The ProGold copy strategy is currently at its stated follower capacity. Join the waitlist to be notified when new copy-trading capacity becomes available.
+    </p>
+    <p style="color:var(--muted);max-width:640px;margin:0 auto 22px;line-height:1.7;">
+      Waitlist priority is given in the order requests are received.
+    </p>
+    <a class="cta" href="mailto:rieve@live.com?subject=PG3%20AI%20ProGold%20Copy-Trading%20Waitlist%20Request&amp;body=Hi%20PG3%20AI%20team%2C%0A%0AI%27d%20like%20to%20join%20the%20waitlist%20for%20the%20ProGold%20copy-trading%20strategy.%0A%0AName%3A%0ALocation%3A%0ASupported%20broker%20currently%20used%20%28if%20any%29%3A%0A%0AThanks.">Join the Waitlist</a>
+    <p style="color:var(--soft);font-size:12px;max-width:640px;margin:20px auto 0;line-height:1.6;">
+      Joining the waitlist does not involve transferring funds to PG3 AI and does not guarantee future access. Copy trading involves substantial risk and may result in losses.
+    </p>
+  </div>
 </section>
   </main>
 
@@ -1488,10 +1578,21 @@ Waitlist priority is given in the order requests are received.
       <a href="#performance" class="footer-link">Performance</a>
       <a href="#strategy" class="footer-link">Strategy</a>
       <a href="#risk" class="footer-link">Risk</a>
-      <a href="#invest" class="footer-link">Invest</a>
+      <a href="#copy" class="footer-link">Copy</a>
     </div>
-    <span style="color:#d4af37;font-weight:700;letter-spacing:.03em;">Copy Trading Risk Disclaimer</span><br><br>
-    Copy trading involves substantial risk and is not suitable for every investor. Past performance does not guarantee future results. The value of investments can rise or fall, and you may lose part or all of your capital. Strategy returns, drawdowns, and account statistics shown on this page are for informational purposes only and should not be treated as financial advice or a promise of future performance. Before allocating capital, you should assess your financial situation, risk tolerance, and investment objectives carefully.
+    <div style="color:#d4af37;font-weight:700;letter-spacing:.06em;font-size:13px;text-transform:uppercase;margin-bottom:12px;">Copy Trading Risk Disclaimer</div>
+    <!-- VERIFY: publish the no-deposit statement below only if PG3 AI genuinely does not receive follower deposits. -->
+    <div style="max-width:720px;margin:0 auto;text-align:left;font-size:14px;line-height:1.8;color:#bdb6a6;">
+      <p style="margin:0 0 12px;">
+        Copy trading involves substantial risk and is not suitable for every trader. The value of an account following the strategy can rise or fall, and you may lose part or all of your capital. Past performance does not guarantee future results.
+      </p>
+      <p style="margin:0 0 12px;">
+        Strategy returns, drawdowns and account statistics shown on this page are informational only — they are not financial advice or a promise of future performance. Before connecting an account to the copy strategy, assess your own financial situation, risk tolerance and objectives.
+      </p>
+      <p style="margin:0;">
+        Copied trades execute in the follower&rsquo;s own brokerage account, held with a third-party broker. PG3 AI does not receive follower deposits or hold client money, and third-party broker regulatory status does not constitute regulatory approval or endorsement of PG3 AI.
+      </p>
+    </div>
     <div style="margin-top:18px;color:#bdb6a6;font-size:13px;">
       Reach out to us at <a href="mailto:info@pg3ai.com" style="color:#d4af37;font-weight:600;text-decoration:none;transition:color .2s ease;" onmouseover="this.style.color='#f2d57a'" onmouseout="this.style.color='#d4af37'">info@pg3ai.com</a>
     </div>
