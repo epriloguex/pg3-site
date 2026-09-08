@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#080808" />
   <title>Page Not Found | PG3 AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%231a1814' stroke='%23d4af37' stroke-width='2'/><text x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='bold' fill='%23d4af37'>PG</text></svg>" type="image/svg+xml">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
+    *:focus-visible{outline:2px solid #d4af37;outline-offset:3px;border-radius:4px}
+    html{color-scheme:dark;-webkit-text-size-adjust:100%}
     body{
       min-height:100vh;
       display:flex;align-items:center;justify-content:center;
@@ -21,6 +24,7 @@
       color:#f5f2e8;
       text-align:center;
       padding:24px;
+      -webkit-font-smoothing:antialiased;
     }
     .container{max-width:520px}
     .logo{
@@ -64,7 +68,26 @@
       text-decoration:none;
       transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
     }
-    .cta:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,175,55,.3);filter:brightness(1.08)}
+    .cta:hover,.cta:focus-visible{transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,175,55,.3);filter:brightness(1.08)}
+    .cta:active{transform:translateY(0)}
+    .links{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+    .ghost{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 28px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:#f5f2e8;font-weight:700;text-decoration:none;
+      transition:border-color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .ghost:hover,.ghost:focus-visible{border-color:#d4af37;background:rgba(212,175,55,.06);transform:translateY(-2px)}
+    .fine{color:#8f876f;font-size:12px;line-height:1.65;margin-top:28px;margin-bottom:0}
+    @media (max-width:420px){
+      .links{flex-direction:column;align-items:stretch}
+      .links .cta,.links .ghost{width:100%}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *{transition-duration:.01ms !important}
+    }
   </style>
 </head>
 <body>
@@ -72,8 +95,12 @@
     <img class="logo" src="/assets/pg3ai-logo-v2.jpg" alt="PG3 AI logo" width="120" height="120" />
     <h1>404</h1>
     <h2>Page Not Found</h2>
-    <p>The page you're looking for doesn't exist or has been moved.</p>
-    <a class="cta" href="/">Back to Home</a>
+    <p>The page you&rsquo;re looking for doesn&rsquo;t exist or has been moved.</p>
+    <div class="links">
+      <a class="cta" href="/">Back to Home</a>
+      <a class="ghost" href="/#performance">View Performance</a>
+    </div>
+    <p class="fine">Need a hand? Reach us at <a href="mailto:info@pg3ai.com" style="color:#d4af37;font-weight:600;text-decoration:none;">info@pg3ai.com</a></p>
   </div>
 </body>
 </html>
