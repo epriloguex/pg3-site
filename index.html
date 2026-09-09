@@ -252,6 +252,12 @@
     .stat .label{color:var(--soft);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
     .stat .value{font-size:clamp(26px,2.8vw,34px);font-weight:800;margin:14px 0 8px;white-space:nowrap}
     .stat .sub{color:var(--muted);font-size:14px;line-height:1.5}
+    /* Figure carrying a unit word — a touch smaller so it never overruns a narrow card */
+    .stat .value-unit{font-size:clamp(23px,2.3vw,28px)}
+    .perf-source{
+      color:var(--soft);font-size:12px;letter-spacing:.02em;
+      text-align:center;margin:20px 0 0;
+    }
 
     /* Numbered feature list */
     .list{display:grid;gap:12px;margin-top:16px}
@@ -910,29 +916,30 @@
       <div class="stat">
         <div class="label">Profit Factor</div>
         <div class="value">4.44</div>
-        <div class="sub">Shows how much gross profit the system generates for every $1 of gross loss.</div>
+        <div class="sub">Gross profit generated for every $1 of gross loss.</div>
       </div>
       <div class="stat">
         <div class="label">Expectancy</div>
-        <div class="value">256 pips</div>
-        <div class="sub">Measures the average edge generated per trade across the live track record.</div>
+        <div class="value value-unit">115.1 pips</div>
+        <div class="sub">Average historical expectancy per completed trade across the published track record.</div>
       </div>
       <div class="stat">
         <div class="label">Win Rate</div>
         <div class="value gradient">60.89%</div>
-        <div class="sub">Percentage of trades closed in profit.</div>
+        <div class="sub">Percentage of completed trades closed in profit.</div>
       </div>
       <div class="stat">
-        <div class="label">Sharpe Ratio</div>
-        <div class="value">0.13</div>
-        <div class="sub">Return earned per unit of volatility across the live track record.</div>
+        <div class="label">Total Trades</div>
+        <div class="value">875</div>
+        <div class="sub">Number of completed trades represented in the published live track record.</div>
       </div>
       <div class="stat">
         <div class="label">Max Drawdown</div>
         <div class="value">29.67%</div>
-        <div class="sub">Largest peak-to-trough equity decline. Reported for full transparency.</div>
+        <div class="sub">Largest historical peak-to-trough equity decline.</div>
       </div>
     </div>
+    <p class="perf-source">Source: Myfxbook &middot; PG3 AI Proprietary Account &middot; Live Track Record</p>
   </section>
 
   <hr class="section-divider" aria-hidden="true">
