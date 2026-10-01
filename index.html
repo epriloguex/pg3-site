@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PG3 AI Pte. Ltd. is a Singapore-registered trading technology company researching XAUUSD. ProGold 3 AI is our own systematic gold model, and the results published here are from PG3 AI’s proprietary trading account. Information only — no products or services are offered." />
+  <meta name="description" content="PG3 AI Pte. Ltd. is a Singapore-registered trading technology company researching XAUUSD. ProGold 3 AI is our own systematic gold trading system, and the results published here are from PG3 AI’s proprietary trading account. Information only — no products or services are offered." />
   <meta name="theme-color" content="#080808" />
   <meta property="og:title" content="PG3 AI | ProGold 3 AI — Proprietary XAUUSD Research" />
   <meta property="og:description" content="A Singapore-registered gold trading technology company. Results shown are from PG3 AI’s own proprietary account — 612.64% cumulative return as of October 1, 2026, alongside a 29.67% maximum drawdown. Information only; not an offer, invitation or advice." />
@@ -36,7 +36,7 @@
     "url": "https://pg3ai.com/",
     "logo": "https://pg3ai.com/assets/pg3ai-logo-v2.jpg",
     "email": "info@pg3ai.com",
-    "description": "PG3 AI Pte. Ltd. is a Singapore-registered trading technology company specialising in XAUUSD research. ProGold 3 AI is the company's own systematic gold trading model, operated on its proprietary account.",
+    "description": "PG3 AI Pte. Ltd. is a Singapore-registered trading technology company specialising in XAUUSD research. ProGold 3 AI is the company's own systematic gold trading system, operated on its proprietary account.",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "SG"
@@ -230,7 +230,22 @@
       display:inline-block;opacity:.5;flex:0 0 auto;
     }
     .backtest-section{background:linear-gradient(180deg,#070707 0%,#0a0908 100%)}
-    .broker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto}
+    #brokers .lede{margin:0 auto}
+    .broker-list{margin:26px auto 0;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:8px 14px;max-width:760px}
+    .broker-list-label{color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.01em}
+    .broker-names{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:4px 14px}
+    .broker-names .broker-name{color:var(--text);font-size:16px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+    .broker-names .sep{color:var(--gold)}
+    .regulator-heading{margin:60px 0 14px;color:var(--text);font-size:clamp(19px,2vw,23px);font-weight:700;line-height:1.3}
+    #brokers .regulator-intro{color:var(--muted);font-size:15px;line-height:1.7;margin:0 auto 30px}
+    .broker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:760px;margin:0 auto}
+    .pillar.regulator-card{display:flex;flex-direction:column;align-items:center;padding:28px 20px 26px}
+    .regulator-card .pillar-icon{margin-bottom:14px}
+    .regulator-card .regulator-acronym{font-size:24px;line-height:1.2;letter-spacing:.08em;margin-top:0}
+    .regulator-card .pillar-sub{margin-top:6px}
+    .regulator-card .pillar-note{margin-top:8px;font-size:13px;color:var(--muted)}
+    #brokers .regulator-clarification{margin:30px auto 0;color:var(--muted);font-size:14px;line-height:1.7}
+    #brokers .regulator-risk{margin:12px auto 0;color:var(--soft);font-size:13px;line-height:1.65}
 
     /* Performance stat cards */
     .stats{padding:calc(var(--section-y) * .58) 0 calc(var(--section-y) * .42)}
@@ -599,7 +614,9 @@
     }
     @media (max-width:768px){
       .ai-metrics-row{grid-template-columns:repeat(2,1fr)}
-      .broker-grid{grid-template-columns:1fr}
+      .broker-grid{grid-template-columns:1fr;max-width:420px;gap:14px}
+      .pillar.regulator-card{padding:22px 18px}
+      .regulator-heading{margin-top:48px}
       .footer-legal{text-align:left;font-size:14px;line-height:1.8}
       .footer-legal p{margin:0 0 14px}
     }
@@ -715,7 +732,7 @@
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#performance">Performance</a>
-        <a href="#strategy">Strategy</a>
+        <a href="#system">System</a>
         <a href="#risk">Risk</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -736,7 +753,7 @@
         <div class="eyebrow">PROPRIETARY GOLD SYSTEM</div>
         <h1><span class="gradient">Institutional Gold<br>Performance.</span> Built on Proprietary Research.</h1>
         <p>
-          ProGold 3 AI is our own systematic XAUUSD trading model, built around disciplined risk management, structured execution and transparent performance reporting. The results below come from PG3 AI&rsquo;s proprietary account and are published in full &mdash; gains and drawdowns alike. This page is information about our research only; it offers no product or service.
+          ProGold 3 AI is our own systematic XAUUSD trading system, built around disciplined risk management, structured execution and transparent performance reporting. The results below come from PG3 AI&rsquo;s proprietary account and are published in full &mdash; gains and drawdowns alike. This page is information about our research only; it offers no product or service.
         </p>
       </div>
     </div>
@@ -958,14 +975,14 @@
   </section>
 
   <hr class="section-divider" aria-hidden="true">
-  <section class="section wrap" id="strategy" aria-labelledby="strategy-title">
+  <section class="section wrap" id="system" aria-labelledby="system-title">
     <div class="panel reveal">
-      <h2 id="strategy-title">Strategy Overview</h2>
+      <h2 id="system-title">System Overview</h2>
       <p>
-        ProGold 3 AI is a hybrid human-AI gold trading model developed specifically for XAUUSD, combining experienced trader judgement with systematic market analysis and rule-based risk controls. It is operated by PG3 AI on the company&rsquo;s own proprietary account.
+        ProGold 3 AI is a hybrid human-AI gold trading system developed specifically for XAUUSD, combining experienced trader judgement with systematic market analysis and rule-based risk controls. It is operated by PG3 AI on the company&rsquo;s own proprietary account.
       </p>
       <div class="list">
-        <!-- VERIFY: confirm the data feeds described below (central bank signals, inflation data, USD correlations) are actually ingested by the model before publishing. -->
+        <!-- VERIFY: confirm the data feeds described below (central bank signals, inflation data, USD correlations) are actually ingested by the system before publishing. -->
         <div class="item">
           <div class="dot">01</div>
           <div>
@@ -985,15 +1002,15 @@
           <div>
             <strong>Execution &amp; Risk Discipline</strong><br>
             <!-- VERIFY: confirm a defined stop-loss is placed on every position and that spread/liquidity entry filters are implemented as described. -->
-            <span class="muted">Rule-based entries and exits with a defined stop-loss on every position. Entry filters are intended to avoid wide-spread and thin-liquidity conditions, and every trade the model takes is logged and reviewable.</span>
+            <span class="muted">Rule-based entries and exits with a defined stop-loss on every position. Entry filters are intended to avoid wide-spread and thin-liquidity conditions, and every trade the system takes is logged and reviewable.</span>
           </div>
         </div>
         <div class="item">
           <div class="dot">04</div>
           <div>
-            <strong>Continuous Model Evaluation</strong><br>
+            <strong>Continuous System Evaluation</strong><br>
             <!-- VERIFY: confirm walk-forward evaluation and regime detection are part of the live process. -->
-            <span class="muted">Walk-forward evaluation with regime detection across risk-on, risk-off and range-bound conditions, to reduce the risk of fitting the model to outdated market behaviour.</span>
+            <span class="muted">Walk-forward evaluation with regime detection across risk-on, risk-off and range-bound conditions, to reduce the risk of fitting the system to outdated market behaviour.</span>
           </div>
         </div>
       </div>
@@ -1006,10 +1023,10 @@
       <span class="tag">About PG3 AI</span>
       <h2 id="about-title">One Market. Studied Relentlessly.</h2>
       <p>
-        PG3 AI Pte. Ltd. is a Singapore-registered trading technology company focused specifically on gold. Our research and strategy development concentrate on XAUUSD — including market structure, momentum, volatility and changing macroeconomic conditions.
+        PG3 AI Pte. Ltd. is a Singapore-registered trading technology company focused specifically on gold. Our research and system development concentrate on XAUUSD — including market structure, momentum, volatility and changing macroeconomic conditions.
       </p>
       <p>
-        ProGold 3 AI applies that research as a structured, rule-based trading model, which PG3 AI runs on its own proprietary account. Results are published alongside drawdowns and other risk statistics so performance and risk can be read together rather than separately.
+        ProGold 3 AI applies that research as a structured, rule-based trading system, which PG3 AI runs on its own proprietary account. Results are published alongside drawdowns and other risk statistics so performance and risk can be read together rather than separately.
       </p>
       <div class="card-grid" style="margin-top:22px;">
         <!-- Pillar 01 -->
@@ -1018,7 +1035,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="#d4af37"/></svg>
           </div>
           <div class="pillar-title">Single-Market Focus</div>
-          <div class="pillar-body">Our research, models and risk framework are built around XAUUSD, not retrofitted from unrelated asset classes.</div>
+          <div class="pillar-body">Our research, system design and risk controls are built around XAUUSD, not retrofitted from unrelated asset classes.</div>
         </div>
         <!-- Pillar 02 -->
         <div class="pillar">
@@ -1042,7 +1059,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M5 12H2"/><path d="M22 12h-3"/><path d="M6.3 6.3 4.2 4.2"/><path d="M19.8 19.8l-2.1-2.1"/><path d="M6.3 17.7 4.2 19.8"/><path d="M19.8 4.2l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
           </div>
           <div class="pillar-title">Transparent Reporting Standards</div>
-          <div class="pillar-body">Disciplined risk controls, structured execution, performance transparency and ongoing model evaluation.</div>
+          <div class="pillar-body">Disciplined risk controls, structured execution, performance transparency and ongoing system evaluation.</div>
         </div>
       </div>
       <!-- VERIFY: publish the "trades own capital / does not accept deposits or manage third-party money" statements above and below only if that is factually correct for the actual business. -->
@@ -1057,11 +1074,11 @@
     <div class="panel reveal">
       <h2 id="risk-title">Risk Framing</h2>
       <p>
-        A 29.67% maximum drawdown is a material risk characteristic of the model and should be considered alongside its historical returns. We publish drawdown information because performance should be evaluated on both return and risk, not returns alone &mdash; including when performance is unfavourable.
+        A 29.67% maximum drawdown is a material risk characteristic of the system and should be considered alongside its historical returns. We publish drawdown information because performance should be evaluated on both return and risk, not returns alone &mdash; including when performance is unfavourable.
       </p>
       <p>
-        <!-- VERIFY: confirm each control listed below is actually implemented in the live strategy (stop-losses, daily drawdown limits, exposure caps, automatic de-leveraging). Remove any that are not. -->
-        Risk controls are built into the strategy's rules: a stop-loss on every position, daily drawdown limits, exposure caps and reduced position sizing when volatility exceeds predefined thresholds.
+        <!-- VERIFY: confirm each control listed below is actually implemented in the live system (stop-losses, daily drawdown limits, exposure caps, automatic de-leveraging). Remove any that are not. -->
+        Risk controls are built into the system's rules: a stop-loss on every position, daily drawdown limits, exposure caps and reduced position sizing when volatility exceeds predefined thresholds.
       </p>
       <p>
         Drawdown periods are an expected part of the return profile, not an anomaly. The live track record currently reflects a 60.89% historical win rate; this statistic may vary materially over time and does not predict future results. Past performance does not guarantee future results.
@@ -1090,7 +1107,7 @@
     </div>
   </section>
 
-  <!-- Supported Broker & Execution Infrastructure -->
+  <!-- Execution Infrastructure -->
   <hr class="section-divider" aria-hidden="true">
   <section class="section wrap" id="brokers" aria-labelledby="brokers-title">
     <div class="reveal center" style="max-width:900px;margin:0 auto;">
@@ -1099,49 +1116,52 @@
         Execution Infrastructure
       </span>
       <h2 id="brokers-title">
-        Our Own <span style="color:var(--gold);">Execution Venues</span>
+        Our <span style="color:var(--gold);">Execution Infrastructure</span>
       </h2>
       <p class="lede measure">
-        ProGold 3 AI is executed on PG3 AI&rsquo;s proprietary account through third-party brokerage infrastructure. PG3 AI is the account holder and contracts with these brokers directly; no external accounts are connected to the model.
+        Proprietary trading activity using the ProGold 3 AI System is conducted through dedicated trading accounts with established third-party brokers. No external client accounts are connected to the system.
       </p>
-      <p style="color:var(--text);font-size:15px;font-weight:600;margin:14px 0 8px;">
-        Execution venues currently used: HF Markets and AxiTrader.
+      <p class="broker-list">
+        <span class="broker-list-label">Execution brokers currently used:</span>
+        <span class="broker-names"><span class="broker-name">HFM (HF Markets Group)</span><span class="sep" aria-hidden="true">&middot;</span><span class="broker-name">Axi</span><span class="sep" aria-hidden="true">&middot;</span><span class="broker-name">Exness</span></span>
       </p>
-      <!-- VERIFY: confirm PG3 AI genuinely executes its proprietary account through both brokers named above, and confirm which legal entity within each broker group PG3 AI contracts with, before making entity-specific regulatory statements. Do not aggregate licences held by different group entities. -->
-      <p class="fine measure" style="margin-bottom:22px;">
-        The licences shown below are held by entities within these broker groups and relate to those brokers, not to PG3 AI. The applicable regulator and account terms depend on the specific entity contracted with.
+
+      <h3 class="regulator-heading">Major Regulators Across Our Broker Groups</h3>
+      <!-- VERIFY: the statement below must remain accurate for each broker group currently used, i.e. that each of FCA, ASIC and CySEC authorises at least one entity within the HFM (HF Markets Group), Axi or Exness groups. Do not state that any specific PG3 AI account is held with an FCA-, ASIC- or CySEC-regulated entity unless that exact account/entity relationship has been confirmed. -->
+      <p class="measure regulator-intro">
+        PG3 AI uses established brokerage groups whose regulated entities operate under major international financial authorities. Across the broker groups currently used by PG3 AI, entities include those authorised by the FCA, ASIC and CySEC.
       </p>
-      <div class="broker-grid">
-        <!-- ASIC License -->
-        <div class="pillar">
+      <div class="broker-grid regulator-grid">
+        <div class="pillar regulator-card">
           <div class="pillar-icon center-x">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
-          <div class="pillar-kicker">ASIC</div>
-          <div class="pillar-sub">Australia</div>
-          <div class="pillar-note">Australian Securities &amp; Investments Commission — Australia&rsquo;s financial services regulator.</div>
-        </div>
-        <!-- CySEC License -->
-        <div class="pillar">
-          <div class="pillar-icon center-x">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <div class="pillar-kicker">CySEC</div>
-          <div class="pillar-sub">Cyprus (EU)</div>
-          <div class="pillar-note">Cyprus Securities &amp; Exchange Commission — the Cyprus regulator, within the EU MiFID II framework.</div>
-        </div>
-        <!-- FCA License -->
-        <div class="pillar">
-          <div class="pillar-icon center-x">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <div class="pillar-kicker">FCA</div>
+          <div class="pillar-kicker regulator-acronym">FCA</div>
           <div class="pillar-sub">United Kingdom</div>
-          <div class="pillar-note">Financial Conduct Authority — the UK&rsquo;s financial services regulator.</div>
+          <div class="pillar-note">Financial Conduct Authority</div>
+        </div>
+        <div class="pillar regulator-card">
+          <div class="pillar-icon center-x">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="pillar-kicker regulator-acronym">ASIC</div>
+          <div class="pillar-sub">Australia</div>
+          <div class="pillar-note">Australian Securities &amp; Investments Commission</div>
+        </div>
+        <div class="pillar regulator-card">
+          <div class="pillar-icon center-x">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="pillar-kicker regulator-acronym">CySEC</div>
+          <div class="pillar-sub">Cyprus (EU)</div>
+          <div class="pillar-note">Cyprus Securities and Exchange Commission</div>
         </div>
       </div>
-      <p class="fine measure" style="margin-top:18px;">
-        Broker regulation does not guarantee execution quality or model performance, and does not remove trading or counterparty risk. Any licence or regulatory status held by a third-party broker applies solely to that entity and must not be interpreted as regulatory approval, endorsement or supervision of PG3 AI by any of the authorities named above.
+      <p class="measure regulator-clarification">
+        Regulatory authorisations shown above apply to specific legal entities within the respective broker groups and do not constitute regulation, approval or endorsement of PG3 AI. The regulator applicable to any particular account depends on the specific broker entity with which that account is maintained.
+      </p>
+      <p class="measure regulator-risk">
+        Broker regulation does not guarantee execution quality, trading results or system performance, nor does it eliminate trading, market or counterparty risk.
       </p>
     </div>
   </section>
@@ -1157,7 +1177,7 @@
     7-Year Simulated Backtest
   </span>
   <p>
-    The performance reported earlier on this page reflects actual results from PG3 AI&rsquo;s proprietary account. The backtest below is simulated: the same model logic applied retrospectively to seven years of historical XAUUSD data, shown for context only.
+    The performance reported earlier on this page reflects actual results from PG3 AI&rsquo;s proprietary account. The backtest below is simulated: the same system logic applied retrospectively to seven years of historical XAUUSD data, shown for context only.
   </p>
 </div>
 
@@ -1169,7 +1189,7 @@
 <span class="tag">
   Simulated Backtest
   <span class="tag-bullet" aria-hidden="true"></span>
-  <span class="tag-note">Based on AI model logic</span>
+  <span class="tag-note">Based on ProGold 3 AI system logic</span>
 </span>
 
 <h2 id="backtest-title">Long&#8209;Term Simulated Performance</h2>
@@ -1192,13 +1212,13 @@ Hypothetical returns of ProGold 3 AI from January 2019 onward &mdash; modeled on
     </span>
   </div>
   <div class="legend-keys" style="gap:16px;">
-    <span style="color:var(--gold);font-size:13px;font-weight:700;">+841.2% AI strategy</span>
+    <span style="color:var(--gold);font-size:13px;font-weight:700;">+841.2% ProGold 3 AI system</span>
     <span style="color:#8a8272;font-size:13px;font-weight:600;">+92.7% gold</span>
   </div>
 </div>
 
 <!-- MAIN CHART SVG — 2019 to 2026 (7 years simulated) -->
-<svg viewBox="0 0 1200 620" style="width:100%;border-radius:16px;background:radial-gradient(ellipse at 30% 20%,rgba(212,175,55,.12),#141210 60%);" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simulated 7-year backtest equity curve comparing ProGold 3 AI strategy against gold buy-and-hold from January 2019 to May 2026">
+<svg viewBox="0 0 1200 620" style="width:100%;border-radius:16px;background:radial-gradient(ellipse at 30% 20%,rgba(212,175,55,.12),#141210 60%);" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simulated 7-year backtest equity curve comparing the ProGold 3 AI system against gold buy-and-hold from January 2019 to May 2026">
 
 <defs>
   <linearGradient id="simGradFill" x1="0" y1="0" x2="0" y2="1">
@@ -1528,7 +1548,7 @@ Hypothetical returns of ProGold 3 AI from January 2019 onward &mdash; modeled on
 </div>
 
 <p class="lede" style="margin:22px auto 0;max-width:780px;">
-The simulation applies the <strong style="color:#d4af37;">same AI model logic</strong> powering the live account — macro regime detection, momentum scoring, dynamic position sizing, and risk controls — to seven years of historical XAUUSD data. Simulated outperformance versus passive gold: <strong style="color:#d4af37;">approximately 9×</strong>.
+The simulation applies the <strong style="color:#d4af37;">same system logic</strong> powering the live account — macro regime detection, momentum scoring, dynamic position sizing, and risk controls — to seven years of historical XAUUSD data. Simulated outperformance versus passive gold: <strong style="color:#d4af37;">approximately 9×</strong>.
 </p>
 
 <div class="live-badges">
@@ -1592,7 +1612,7 @@ The simulation applies the <strong style="color:#d4af37;">same AI model logic</s
     <img class="footer-logo" src="/assets/pg3ai-logo-v2.jpg" alt="PG3 AI logo" width="104" height="104" loading="lazy" decoding="async"/>
     <nav class="footer-nav" aria-label="Footer navigation">
       <a href="#performance" class="footer-link">Performance</a>
-      <a href="#strategy" class="footer-link">Strategy</a>
+      <a href="#system" class="footer-link">System</a>
       <a href="#about" class="footer-link">About</a>
       <a href="#risk" class="footer-link">Risk</a>
       <a href="#brokers" class="footer-link">Execution</a>
