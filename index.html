@@ -247,6 +247,23 @@
     #brokers .regulator-clarification{margin:30px auto 0;color:var(--muted);font-size:14px;line-height:1.7}
     #brokers .regulator-risk{margin:12px auto 0;color:var(--soft);font-size:13px;line-height:1.65}
 
+    /* PG3 AI in Numbers — member usage figures */
+    .usage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px;text-align:left}
+    .usage-card{
+      position:relative;padding:28px 26px;border-radius:20px;
+      background:linear-gradient(180deg, rgba(212,175,55,.08), rgba(255,255,255,.02));
+      border:1px solid var(--hairline);
+      transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+    .usage-card:hover{border-color:rgba(212,175,55,.2);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.3)}
+    .usage-period{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .usage-figure{display:flex;align-items:baseline;gap:10px;margin:16px 0 14px;white-space:nowrap}
+    .usage-currency,.usage-unit{color:var(--soft);font-size:clamp(15px,1.6vw,18px);font-weight:700;letter-spacing:.04em}
+    .usage-amount{font-size:clamp(40px,5vw,58px);font-weight:800;line-height:1;letter-spacing:-.02em}
+    .usage-title{color:var(--text,#fff);font-weight:700;font-size:16px;line-height:1.4;margin-bottom:6px}
+    .section .usage-desc{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+    .usage-note{margin-top:22px}
+    @media (max-width:768px){.usage-grid{grid-template-columns:1fr}}
     /* Performance stat cards */
     .stats{padding:calc(var(--section-y) * .58) 0 calc(var(--section-y) * .42)}
     .stat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
@@ -1563,6 +1580,44 @@ The simulation applies the <strong style="color:#d4af37;">same system logic</str
 </div>
 </section>
 
+<!-- PG3 AI in Numbers — member usage at scale, leading into the PG3 Terminal -->
+  <hr class="section-divider" aria-hidden="true">
+  <section class="section wrap" id="numbers" aria-labelledby="numbers-title">
+    <div class="panel reveal center">
+      <span class="tag">Real-World Usage at Scale</span>
+      <h2 id="numbers-title">PG3 AI in Numbers</h2>
+      <p class="lede measure">
+        Beyond our proprietary account, PG3 AI&rsquo;s XAUUSD research is used by PG3 Terminal members on their own trading accounts. The figures below show qualifying trading volume attributed to those member accounts.
+      </p>
+      <!-- VERIFY: confirm these volume figures, their reporting date and the source/methodology used to define "qualifying" volume before publishing. -->
+      <div class="usage-grid reveal reveal-stagger">
+        <div class="usage-card">
+          <div class="usage-period">Lifetime to Date</div>
+          <div class="usage-figure" aria-label="13.38 billion US dollars">
+            <span class="usage-currency" aria-hidden="true">US$</span>
+            <span class="usage-amount gradient" aria-hidden="true">13.38</span>
+            <span class="usage-unit" aria-hidden="true">Billion</span>
+          </div>
+          <div class="usage-title">Qualifying Lifetime Client Trading Volume</div>
+          <p class="usage-desc">Cumulative qualifying volume attributed to client accounts across the full reporting history.</p>
+        </div>
+        <div class="usage-card">
+          <div class="usage-period">Past 12 Months</div>
+          <div class="usage-figure" aria-label="4.69 billion US dollars">
+            <span class="usage-currency" aria-hidden="true">US$</span>
+            <span class="usage-amount gradient" aria-hidden="true">4.69</span>
+            <span class="usage-unit" aria-hidden="true">Billion</span>
+          </div>
+          <div class="usage-title">Qualifying Client Trading Volume &mdash; Past 12 Months</div>
+          <p class="usage-desc">Qualifying volume attributed to client accounts across the most recent twelve-month reporting period.</p>
+        </div>
+      </div>
+      <p class="fine measure usage-note">
+        Volume figures reflect notional trading activity by PG3 Terminal members on their own accounts with third-party brokers. They are not assets under management, deposits or profits. PG3 AI does not hold member funds, connect member accounts to the ProGold 3 AI System, or execute trades on members&rsquo; behalf. Trading volume is not an indicator of trading performance.
+      </p>
+    </div>
+  </section>
+
 <!-- PG3 Terminal — members' next step after reviewing the record, before Contact -->
   <hr class="section-divider" aria-hidden="true">
   <section class="section wrap" id="terminal" aria-labelledby="terminal-title">
@@ -1617,6 +1672,7 @@ The simulation applies the <strong style="color:#d4af37;">same system logic</str
       <a href="#risk" class="footer-link">Risk</a>
       <a href="#brokers" class="footer-link">Execution</a>
       <a href="#backtest" class="footer-link">Backtest</a>
+      <a href="#numbers" class="footer-link">In Numbers</a>
       <a href="#terminal" class="footer-link">Terminal</a>
       <a href="#contact" class="footer-link">Contact</a>
     </nav>
