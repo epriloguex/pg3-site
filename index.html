@@ -256,7 +256,8 @@
       transition:border-color .25s ease, transform .25s ease, box-shadow .25s ease;
     }
     .usage-card:hover{border-color:rgba(212,175,55,.2);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.3)}
-    .usage-figure{display:flex;align-items:baseline;gap:10px;margin:0 0 14px;white-space:nowrap}
+    .usage-period{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .usage-figure{display:flex;align-items:baseline;gap:10px;margin:16px 0 14px;white-space:nowrap}
     .usage-currency,.usage-unit{color:var(--soft);font-size:clamp(15px,1.6vw,18px);font-weight:700;letter-spacing:.04em}
     .usage-amount{font-size:clamp(40px,5vw,58px);font-weight:800;line-height:1;letter-spacing:-.02em}
     .usage-title{color:var(--text,#fff);font-weight:700;font-size:16px;line-height:1.4;margin-bottom:6px}
@@ -1587,30 +1588,32 @@ The simulation applies the <strong style="color:#d4af37;">same system logic</str
       <span class="tag">Real-World Usage at Scale</span>
       <h2 id="numbers-title">PG3 AI in Numbers</h2>
       <p class="lede measure">
-        Beyond our proprietary account, selected PG3 Terminal members use PG3 AI market analysis as part of their own trading process. The figures below represent aggregate notional trading volume recorded across participating member accounts, where members independently made their own trading decisions and executed trades through their own third-party brokerage accounts.
+        Separately from our proprietary account, participating PG3 Terminal members use PG3 AI market analysis as part of their own trading process. The figures below represent aggregate notional trading volume recorded across participating member accounts. Members make their own trading decisions and execute trades independently through their own third-party brokerage accounts.
       </p>
-      <!-- VERIFY: figures sourced from Exness partner account records as at 30 September 2026; update the figures and date together whenever they are refreshed. -->
+      <!-- VERIFY: figures sourced from partner-account trading records as at 30 September 2026; update the figures and date together whenever they are refreshed. Only name the broker in the source line once its use in marketing is confirmed under the partnership terms. -->
       <div class="usage-grid reveal reveal-stagger">
         <div class="usage-card">
+          <div class="usage-period">Lifetime to Date</div>
           <div class="usage-figure" aria-label="13.38 billion US dollars">
             <span class="usage-currency" aria-hidden="true">US$</span>
             <span class="usage-amount gradient" aria-hidden="true">13.38</span>
             <span class="usage-unit" aria-hidden="true">Billion</span>
           </div>
-          <div class="usage-title">Qualifying Lifetime Member Trading Volume</div>
-          <p class="usage-desc">Cumulative qualifying notional trading volume recorded across participating PG3 Terminal member accounts.</p>
+          <div class="usage-title">Lifetime Member Trading Volume</div>
+          <p class="usage-desc">Cumulative aggregate notional trading volume recorded across participating PG3 Terminal member accounts.</p>
         </div>
         <div class="usage-card">
+          <div class="usage-period">Past 12 Months</div>
           <div class="usage-figure" aria-label="4.69 billion US dollars">
             <span class="usage-currency" aria-hidden="true">US$</span>
             <span class="usage-amount gradient" aria-hidden="true">4.69</span>
             <span class="usage-unit" aria-hidden="true">Billion</span>
           </div>
-          <div class="usage-title">Qualifying Member Trading Volume &mdash; Past 12 Months</div>
-          <p class="usage-desc">Qualifying notional trading volume recorded across participating PG3 Terminal member accounts during the most recent twelve-month reporting period.</p>
+          <div class="usage-title">Member Trading Volume &mdash; Past 12 Months</div>
+          <p class="usage-desc">Aggregate notional trading volume recorded across participating PG3 Terminal member accounts during the most recent twelve-month reporting period.</p>
         </div>
       </div>
-      <p class="usage-source">Source: Exness partner account records &middot; As at 30 September 2026</p>
+      <p class="usage-source">Source: Partner-account trading records &middot; As at 30 September 2026</p>
       <p class="fine measure usage-note">
         Volume figures represent aggregate notional trading activity and do not represent assets under management, client deposits, profits, investment returns or portfolio value. PG3 AI does not hold member funds, manage member accounts or execute trades on members&rsquo; behalf. Members make their own trading decisions and execute trades independently through their own third-party brokerage accounts. Trading volume is not an indicator of trading performance or future results.
       </p>
